@@ -2,79 +2,22 @@
 <html lang="pt">
 <head>
     <!--Import Google Icon Font-->
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <?php include_once "../helpers/css.php"?>
     <!--Import materialize.css-->
-    <?php include_once "../helpers/meta.php"?>
+    <?php include_once "../helpers/css.php"?>
 
     <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta charset="UTF-8">
+    <?php include_once "../helpers/meta.php"?>
     <title>Projeto BioLiving - Index</title>
 </head>
 
 <body>
 
 <!--Side Navigation = Menu on Mobile -->
-<ul id="slide-out" class="side-nav">
-    <li>
-        <div class="userView">
-            <div class="background">
-                <img src="../../images/back.png" style="width: 100%;">
-            </div>
-            <a href="#"><img class="circle" src="../../images/user.jpg"></a>
-            <a href="#"><span class="white-text name">Associação Bioliving</span></a>
-            <a href="#"><span class="white-text email">geral.bioliving@gmail.com</span></a>
-        </div>
-    </li>
-    <li><a href="#!"><i class="material-icons">nature_people</i>O Projeto</a></li>
-    <li><a href="#!"><i class="material-icons">add_circle</i>Registar Momento</a></li>
-    <li><a href="#!"><i class="material-icons">photo_library</i>Momentos Recentes</a></li>
-    <li><a href="#!"><i class="material-icons">search</i>Procurar Momentos</a></li>
-    <li><a href="#!"><i class="material-icons">local_offer</i>Loja</a></li>
-    <li><a href="#!"><i class="material-icons">info</i>Associação BioLiving</a></li>
-    <li>
-        <div class="divider"></div>
-    </li>
-    <li><a href="#"><i class="material-icons">person</i>Perfil</a></li>
-    <li><a href="#"><i class="material-icons">directions_walk</i>Logout</a></li>
-</ul>
+<?php include_once "../components/side_nav.php"?>
 
 <!--Top Navigation-->
-<nav class="nav-extended green">
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Título</a>
-        <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
-        <!--
-        Menu on Desktop
-                       <ul id="nav-mobile" class="right hide-on-med-and-down">
-                           <li><a href="#">O Projeto</a></li>
-                           <li><a href="#">Registar Momento</a></li>
-                           <li><a href="#">Momentos recentes</a></li>
-                           <li><a href="#">Loja</a></li>
-                           <li><a href="#">Associação BioLiving</a></li>
-                       </ul>
-        -->
-    </div>
-
-
-    <!--Tabs/ SubMenus-->
-    <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#test1">Produtos</a></li>
-            <li class="tab"><a href="#test2">Carrinho<span class="new badge green darken-4 white-text"
-                                                           data-badge-caption="">4</span></a></li>
-            <li class="tab"><a href="#test3">Publicações</a></li>
-            <li class="tab"><a href="#test4">Detalhes</a></li>
-            <li class="tab"><a href="#test5">Sobre BioLiving/ Projeto</a></li>
-            <li class="tab"><a class="active" href="#login">Login/Registo</a></li>
-            <!--
-                        <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
-                        <li class="tab"><a href="#test4">Test 4</a></li>
-            -->
-        </ul>
-    </div>
-</nav>
-
+<?php include_once "../components/top_nav.php"?>
 
 <!--Page 1 of Tabs/Submenus-->
 <div id="test1" class="col s12 min-height">
