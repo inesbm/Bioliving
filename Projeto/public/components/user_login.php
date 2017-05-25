@@ -1,6 +1,8 @@
+<!--FORMULÁRIO DE LOGIN-->
+
 <div id="login" class="col s12">
     <div class="row">
-        <form class="col s12">
+        <form class="col s12" action="../components/login_control.php" method="post">
                 <div class="input-field col s12">
                     <input id="email" type="email" class="validate">
                     <label for="email">Email</label>
@@ -13,7 +15,12 @@
                     <input type="checkbox" class="remember" id="remember"/>
                     <label for="remember">Lembrar-me</label>
                 </p>
-                <a class="waves-effect waves-light btn green" type="submit" name="action">Entrar</a>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input type="submit" name="login_form_submit" id="login_form_submit"
+                               class="waves-effect waves-light btn green" value="Entrar">
+                    </div>
+                </div>
                 <p>
                     <a class="green-text" href='#!'><b>Esqueceu-se da password?</b></a>
                 </p>
