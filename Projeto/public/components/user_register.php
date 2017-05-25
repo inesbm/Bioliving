@@ -1,7 +1,6 @@
-<!--// LIGAÇÃO À BD -->
-<!--require_once('../connections/connection.php');-->
+<!--FORMULÁRIO DE REGISTO-->
 
-<div class="row">
+<div class="row" xmlns="http://www.w3.org/1999/html">
     <form class="col s12" action="../components/register_control.php" method="post">
         <div class="row">
             <div class="input-field col s6">
@@ -38,6 +37,10 @@
                 <label for="password">Confirmação da Password</label>
             </div>
         </div>
-        <a class="waves-effect waves-light btn green" type="submit" name="action">Submeter</a>
+        <div class="row">
+            <div class="input-field col s12">
+                <input type="submit" name="register_form_submit" id="register_form_submit" class="waves-effect waves-light btn green" value="Submeter">
+            </div>
+        </div>
     </form>
 </div>
