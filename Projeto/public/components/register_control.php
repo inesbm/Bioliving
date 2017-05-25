@@ -17,6 +17,7 @@ $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 if (mysqli_stmt_execute($stmt)) {
     mysqli_stmt_close($stmt);
     //	Acção	de	sucesso
+    header('Location: ../pages/info_bioliving.php');
 } else {
     mysqli_stmt_close($stmt);
     //	Acção	de	erro

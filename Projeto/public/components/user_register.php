@@ -2,7 +2,7 @@
 <!--require_once('../connections/connection.php');-->
 
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" action="../components/register_control.php" method="post">
         <div class="row">
             <div class="input-field col s6">
                 <input id="first_name" type="text" class="validate" name="nome">
@@ -34,6 +34,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <input id="password_confirmation" type="password" class="validate">
+<!--FALTA CONFIRMAR SE A PASSWORD É IGUAL-->
                 <label for="password">Confirmação da Password</label>
             </div>
         </div>
