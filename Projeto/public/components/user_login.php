@@ -10,11 +10,13 @@
                     <label for="password">Password</label>
                 </div>
                 <p>
-                    <input type="checkbox" class="remember" id="remember" checked="checked"/>
+                    <input type="checkbox" class="remember" id="remember"/>
                     <label for="remember">Lembrar-me</label>
                 </p>
                 <a class="waves-effect waves-light btn green" type="submit" name="action">Entrar</a>
-                <a class="waves-effect waves-light btn-flat" type="submit" name="action">Esqueceu-se da password?</a>
+                <p>
+                    <a class="green-text" href='#!'><b>Esqueceu-se da password?</b></a>
+                </p>
         </form>
     </div>
 </div>

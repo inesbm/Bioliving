@@ -24,11 +24,9 @@
     <div class="col s12 m12">
         <div id="test1" class="col s12">
         <?php include_once "../components/user_login.php"?>
-            <p>login</p>
         </div>
         <div id="test2" class="col s12">
         <?php include_once "../components/user_register.php"?>
-            <p>registo</p>
         </div>
     </div>
 </div>
