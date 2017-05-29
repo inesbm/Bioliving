@@ -1,6 +1,6 @@
 <nav class="nav-extended green">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Procurar o Projeto</a>
+        <a href="#" class="brand-logo center">Registar Momentos</a>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         <!--
         Menu on Desktop
@@ -18,8 +18,7 @@
     <!--Tabs/ SubMenus-->
     <div class="nav-content">
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#test1">Localização</a></li>
-            <li class="tab"><a href="#test2">Recentes</a></li>
+            <li class="tab"><a href="#test1">x</a></li>
         </ul>
     </div>
 </nav>

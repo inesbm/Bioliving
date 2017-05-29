@@ -8,7 +8,7 @@
 
     <!--Let browser know website is optimized for mobile-->
     <?php include_once "../helpers/meta.php"?>
-    <title>Projeto BioLiving - Registo de Momentos</title>
+    <title>Projeto BioLiving - Perfil</title>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 <?php include_once "../components/side_nav.php"?>
 
 <!--Top Navigation-->
-<?php include_once "../components/top_nav_moments_register.php" ?>
+<?php include_once "../components/" ?>
 
 <!--Content (colocar aqui o componente)-->
 <div class="row">
