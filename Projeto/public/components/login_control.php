@@ -2,6 +2,9 @@
 //Ligação à BD
 require_once('../connections/connection.php');
 
+//Início de sessão
+session_start();
+
 //VALIDAÇÃO DO LOGIN
 $email = $_POST['email'];
 
@@ -20,14 +23,11 @@ if (mysqli_stmt_fetch($result))	{
         header("Location: ../pages/perfil.php");
     } else {
         // Acção de erro nos dados de login
-        header("Location: ../pages/login_register.php");
-        echo "O email ou password são inválidos!";
-
+        header("Location: ../pages/login_register.php?erro=1");
     }
 }	else {
     // Acção de	erro nos dados de login
-    header("Location: ../pages/login_register.php");
-    echo "O email ou password são inválidos!";
+    header("Location: ../pages/login_register.php?erro=1");
 }
 
 mysqli_stmt_close($result);
