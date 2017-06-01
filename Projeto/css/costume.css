@@ -56,3 +56,9 @@
 .input-field .prefix.active {
     color: #000;
 }
+
+/* brand logo - top nav */
+.logo {
+    height: 100%;
+    margin-top: 0.3em;
+}
