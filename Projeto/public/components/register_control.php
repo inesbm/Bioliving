@@ -2,8 +2,86 @@
 //Ligação à BD
 require_once('../connections/connection.php');
 
-//Registo do utilizador na BD
+//VALIDAÇÃO
 
+//ERROS: 0 = campo vazio, 1 = excesso de caracteres;
+//OUTROS ERROS (password): 2 = campos com valores diferentes; 3 = falta ou excesso de caracteres; 4 = não contém nenhum número; 5 = não contém nenhuma letra maiúscula; 6 = não contém nenhuma letra minúscula
+
+
+//verifica se o campo nome está preenchido
+if (!empty($_POST['nome'])) {
+    //se estiver preenchido, verifica o número de caracteres
+    if ((strlen($_POST['nome'])) > 50) {
+        //erro excesso de caracteres
+        $erro_nome = 1;
+    } else {
+        //campo nome estar vazio
+        $erro_nome = 0;
+    }
+}
+if (!empty($_POST['apelido'])) {
+    //se estiver preenchido, verifica o número de caracteres
+    if ((strlen($_POST['apelido'])) > 50) {
+        //erro excesso de caracteres
+        $erro_apelido = 1;
+    } else {
+        //campo apelido estar vazio
+        $erro_apelido = 0;
+    }
+}
+if (!empty($_POST['username'])) {
+    //se estiver preenchido, verifica o número de caracteres
+    if ((strlen($_POST['username'])) > 20) {
+        //erro excesso de caracteres
+        $erro_username = 1;
+    } else {
+        //campo username estar vazio
+        $erro_username = 0;
+    }
+}
+if (!empty($_POST['email'])) {
+    //se estiver preenchido, verifica o número de caracteres
+    if ((strlen($_POST['email'])) > 100) {
+        //erro excesso de caracteres
+        $erro_email = 1;
+    } else {
+        //campo email estar vazio
+        $erro_email = 0;
+    }
+}
+if (!empty($_POST['password'])) {
+    //se estiver preenchido, verifica o número de caracteres
+    if ((strlen($_POST['password'])) < 8 || (strlen($_POST['password'])) > 12) {
+        //erro por falta ou excesso de caracteres
+        $erro_password = 3;
+    }
+    elseif(!preg_match("#[0-9]+#",$password)) {
+        $erro_password = 4;
+    }
+    elseif(!preg_match("#[A-Z]+#",$password)) {
+        $erro_password = 5;
+    }
+    elseif(!preg_match("#[a-z]+#",$password)) {
+        $erro_password = 6;
+    }
+    else {
+        //campo password estar vazio
+        $erro_password = 0;
+    }
+}
+if (!empty($_POST['cpassword'])) {
+    //se estiver preenchido, verifica se é igual ao campo password
+    if ($_POST["password"] != $_POST["cpassword"]) {
+        $erro_password = 2;
+        // erro = 3 -> password e confirmação da password não são iguais
+    }
+    else {
+        $erro_password = 0;
+    }
+}
+
+
+//Registo do utilizador na BD
     $query = "INSERT INTO bioliving_users (nome, apelido, username, email, password) VALUES (?,?,?,?,?)";
 
     $stmt = mysqli_prepare($link, $query);
@@ -19,11 +97,11 @@ require_once('../connections/connection.php');
     if (mysqli_stmt_execute($stmt)) {
         mysqli_stmt_close($stmt);
         //	Acção	de	sucesso
-        echo "Registo efetuado com sucesso!";
         header('Location: ../pages/info_bioliving.php');
     } else {
         mysqli_stmt_close($stmt);
         //	Acção	de	erro
-        echo "Registo inválido.";
+        //echo "Registo inválido.";
+        //header('Location: ../pages/login_register.php?validacao=2');
     }
 ?>

@@ -1,3 +1,7 @@
+<?php
+//include_once "../components/register_control.php";
+//?>
+
 <!--FORMULÁRIO DE REGISTO-->
 
 <div class="row" xmlns="http://www.w3.org/1999/html">
@@ -6,6 +10,7 @@
             <div class="input-field col s6">
                 <input id="first_name" type="text" class="validate" name="nome">
                 <label for="first_name">Nome</label>
+                <span class="green-text">* <?php echo $erro_nome;?></span>
             </div>
             <div class="input-field col s6">
                 <input id="last_name" type="text" class="validate" name="apelido">
@@ -32,11 +37,21 @@
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="password_confirmation" type="password" class="validate">
+                <input id="password_confirmation" type="password" class="validate" name="cpassword">
 <!--FALTA CONFIRMAR SE A PASSWORD É IGUAL-->
                 <label for="password">Confirmação da Password</label>
             </div>
         </div>
+<!--        <p class="green-text" id="msg_validacao_registo">-->
+<!--            --><?php
+//            if (isset($_GET['validacao']) && $_GET['validacao'] == 1) {
+//                echo "Registo efetuado com sucesso!";
+//            }
+//            if (isset($_GET['validacao']) && $_GET['validacao'] == 2) {
+//                echo "Registo não efetuado.";
+//            }
+//            ?>
+<!--        </p>-->
         <div class="row">
             <div class="input-field col s12">
                 <input type="submit" name="register_form_submit" id="register_form_submit" class="waves-effect waves-light btn green" value="Submeter">

@@ -19,7 +19,7 @@
 <!--Top Navigation-->
 <?php include_once "../components/top_nav_login.php" ?>
 
-<!--Content (coloar aqui o componente)-->
+<!--Content (colocar aqui o componente)-->
 <div class="row">
     <div class="col s12 m12">
         <div id="test1" class="col s12">
