@@ -18,9 +18,8 @@
     <!--Tabs/ SubMenus-->
     <div class="nav-content">
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#test1">Momentos Recentes</a></li>
-            <li class="tab"><a href="#test2">Meus Momentos</a></li>
-            <li class="tab"><a href="#test3">Momentos Gostados</a></li>
+            <li class="tab"><a href="../components/my_moments.php">Meus</a></li>
+            <li class="tab"><a href="../components/follow_moments.php">A seguir</a></li>
         </ul>
     </div>
 </nav>
