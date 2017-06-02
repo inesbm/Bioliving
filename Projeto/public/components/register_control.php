@@ -57,14 +57,17 @@ if (!empty($_POST['password'])) {
         //erro de falta ou excesso de caracteres
         $erro[] = 10;
     }
+
+    $password = $_POST['password'] ;
+
     if (!preg_match("#[0-9]+#", $password)) {
-        $erro_password = 11;
+        $erro[] = 11;
     }
     if (!preg_match("#[A-Z]+#", $password)) {
-        $erro_password = 12;
+        $erro[] = 12;
     }
     if (!preg_match("#[a-z]+#", $password)) {
-        $erro_password = 13;
+        $erro[] = 13;
     }
 }else {
     //erro de campo vazio
@@ -74,12 +77,12 @@ if (!empty($_POST['password'])) {
 if (!empty($_POST['cpassword'])) {
     //se estiver preenchido, verifica se é igual ao campo password
     if ($_POST["password"] != $_POST["cpassword"]) {
-        $erro[] = 11; // erro = 3 -> password e confirmação da password não são iguais
+        $erro[] = 15; // erro = 3 -> password e confirmação da password não são iguais
     }
 }
 else {
     // erro de campo vazio
-    $erro[] = 12;
+    $erro[] = 14;
 }
 
 var_dump($erro);
