@@ -19,5 +19,5 @@
         <div class="divider"></div>
     </li>
     <li><a href="profile.php"><i class="material-icons">person</i>Perfil</a></li>
-    <li><a href="#"><i class="material-icons">directions_walk</i>Logout</a></li>
+    <li><a href="../components/logout.php"><i class="material-icons">directions_walk</i>Logout</a></li>
 </ul>

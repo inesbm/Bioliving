@@ -19,8 +19,9 @@ mysqli_stmt_bind_result($result, $user_id, $role, $pass_hash, $email);
 if (mysqli_stmt_fetch($result))	{
     if (password_verify($_POST['password'],	$pass_hash)) {
         //	Guardar	dados	do	utilizador	em	sessão	e	acção	de	sucesso
-        $user_session = $_SESSION['user'];
-        header("Location: ../pages/perfil.php");
+        if(!isset($_SESSION['user']))
+            $_SESSION['user'] = $_POST['username'];
+            header("Location: ../pages/profile.php");
     } else {
         // Acção de erro nos dados de login
         header("Location: ../pages/login_register.php?erro=1");
