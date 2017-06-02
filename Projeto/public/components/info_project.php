@@ -25,7 +25,7 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title">Instantes</span>
-                    <p>Instantes é o projeto desenvolvido no âmbito das UCs de LabMM4 e Ergonomia dos Sistemas em parceria
+                    <p>Instantes é um projeto desenvolvido no âmbito das UCs de LabMM4 e Ergonomia dos Sistemas em parceria
                         com a Associação BioLiving que visa sensibilizar o público para a plantação de árvores associando-as às
                         suas memórias mais queridas. Tenciona assinalar os momentos especiais, como o nascimento de um filho,
                         o dia do casamento, o início de uma nova etapa, a fundação de uma empresa, entre outros, através do
