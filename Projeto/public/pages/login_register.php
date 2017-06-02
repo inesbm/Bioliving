@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -26,13 +30,13 @@
             <?php include_once "../components/user_login.php" ?>
         </div>
         <div id="test2" class="col s12">
-        <?php include_once "../components/user_register.php"?>
+        <?php include_once "../components/user_register.php" ?>
         </div>
     </div>
 </div>
 
 <!--Footer-->
-<?php include_once "../components/footer.php" ?>
+<?php include_once "../components/footer.php"?>
 
 <!--Import jQuery before materialize.js-->
 <?php include_once "../helpers/jquery_js.php" ?>

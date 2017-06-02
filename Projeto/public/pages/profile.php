@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -20,7 +24,16 @@
 <?php include_once "../components/top_nav_profile.php" ?>
 
 <!--Content (colocar aqui o componente)-->
-<?php include_once "../components/profile.php" ?>
+<div class="row">
+    <div class="col s12 m12">
+        <div id="test1" class="col s12">
+            <?php include_once "../components/profile_personal_data.php" ?>
+        </div>
+        <div id="test2" class="col s12">
+            <?php include_once "../components/my_moments.php"?>
+        </div>
+    </div>
+</div>
 
 <!--Footer-->
 <?php include_once "../components/footer.php" ?>

@@ -1,13 +1,20 @@
 <ul id="slide-out" class="side-nav">
     <li>
-        <div class="userView">
-            <div class="background">
-                <img src="../../images/back2.png" style="width: 100%;">
-            </div>
-            <a href="profile.php"><img class="circle" src="../../images/user.jpg"></a>
-            <a href="#"><span class="white-text name">Associação Bioliving</span></a>
-            <a href="#"><span class="white-text email">geral.bioliving@gmail.com</span></a>
-        </div>
+
+            <?php
+                if (isset($_SESSION['user'])) {
+                    echo "
+                        <div class=\"userView\">
+                            <div class=\"background\">
+                                <img src=\"../../images/back.png\" style=\"width: 100%;\">
+                            </div>
+                            <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/user.jpg\"></a>
+                            <a href=\"#\"><span class=\"white-text name\">Associação Bioliving</span></a>
+                            <a href=\"#\"><span class=\"white-text email\">geral.bioliving@gmail.com</span></a>
+                        </div>
+                    ";
+                }
+            ?>
     </li>
     <li><a href="info_project.php"><i class="material-icons">nature_people</i>O Projeto</a></li>
     <li><a href="moments_register.php"><i class="material-icons">add_circle</i>Registar Momento</a></li>
@@ -18,6 +25,13 @@
     <li>
         <div class="divider"></div>
     </li>
-    <li><a href="profile.php"><i class="material-icons">person</i>Perfil</a></li>
-    <li><a href="../components/logout.php"><i class="material-icons">directions_walk</i>Logout</a></li>
+    <?php
+        if (!isset($_SESSION['user'])) {
+          echo "<li><a href=\"../pages/login_register.php\"><i class=\"material-icons\">directions_walk</i>Login</a></li>";
+        }
+    else {
+        echo "<li><a href=\"profile.php\"><i class=\"material-icons\">person</i>Perfil</a></li>";
+        echo "<li><a href=\"../components/logout.php\"><i class=\"material-icons\">directions_walk</i>Logout</a></li>";
+    }
+    ?>
 </ul>
