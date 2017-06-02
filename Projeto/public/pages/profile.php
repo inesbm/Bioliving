@@ -17,12 +17,17 @@
 <?php include_once "../components/side_nav.php"?>
 
 <!--Top Navigation-->
-<?php include_once "../components/" ?>
+<?php include_once "../components/top_nav_moments.php" ?>
 
 <!--Content (colocar aqui o componente)-->
 <div class="row">
     <div class="col s12 m12">
-        <?php include_once "../components"?>
+        <div id="test1" class="col s12">
+            <?php include_once "../components/profile_personal_data.php" ?>
+        </div>
+        <div id="test2" class="col s12">
+            <?php include_once "../components/my_moments.php"?>
+        </div>
     </div>
 </div>
 
