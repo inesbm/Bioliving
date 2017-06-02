@@ -13,12 +13,4 @@
                        </ul>
         -->
     </div>
-
-
-    <!--Tabs/ SubMenus-->
-    <div class="nav-content">
-        <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#test1">x</a></li>
-        </ul>
-    </div>
 </nav>

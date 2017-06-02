@@ -2,22 +2,22 @@
 <html lang="pt">
 <head>
     <!--Import Google Icon Font-->
-    <?php include_once "../helpers/css.php"?>
+    <?php include_once "../helpers/css.php" ?>
     <!--Import materialize.css-->
-    <?php include_once "../helpers/css.php"?>
+    <?php include_once "../helpers/css.php" ?>
 
     <!--Let browser know website is optimized for mobile-->
-    <?php include_once "../helpers/meta.php"?>
+    <?php include_once "../helpers/meta.php" ?>
     <title>Projeto BioLiving - elementos gerais</title>
 </head>
 
 <body>
 
 <!--Side Navigation = Menu on Mobile -->
-<?php include_once "../components/side_nav.php"?>
+<?php include_once "../components/side_nav.php" ?>
 
 <!--Top Navigation-->
-<?php include_once "../components/top_nav.php"?>
+<?php include_once "../components/top_nav.php" ?>
 
 <!--Page 1 of Tabs/Submenus-->
 <div id="test1" class="col s12 min-height">
@@ -26,7 +26,7 @@
 
             <!-- Dropdown Trigger -->
             <a class='dropdown-button btn white grey-text' style="width: 100%" href='#' data-activates='dropdown1'><i
-                    class="material-icons left">filter_list</i>Filtrar por...<i class="material-icons right">keyboard_arrow_down</i></a>
+                        class="material-icons left">filter_list</i>Filtrar por...<i class="material-icons right">keyboard_arrow_down</i></a>
 
             <!-- Dropdown Structure -->
             <ul id='dropdown1' class='dropdown-content '>
@@ -249,7 +249,7 @@
 
 
 <!--Footer-->
-<?php include_once "../components/footer.php"?>
+<?php include_once "../components/footer.php" ?>
 
 <!--Import jQuery before materialize.js-->
 <?php include_once "../helpers/jquery_js.php" ?>

@@ -1,6 +1,6 @@
 <nav class="nav-extended green">
     <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">Bioliving</a>
+        <a href="#" class="brand-logo center">Perfil</a>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
         <!--        Menu on Desktop
                                <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -11,6 +11,13 @@
                                    <li><a href="#">Associação BioLiving</a></li>
                                </ul>
         -->
+    </div>
+    <!--Tabs/ SubMenus-->
+    <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#produtos">Dados</a></li>
+            <li class="tab"><a href="#carrinho">Editar</a></li>
+        </ul>
     </div>
 
 </nav>
