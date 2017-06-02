@@ -4,75 +4,71 @@ require_once('../connections/connection.php');
 
 //VALIDAÇÃO
 
-//ERROS: 0 = campo vazio, 1 = excesso de caracteres;
-//OUTROS ERROS (password): 2 = campos com valores diferentes; 3 = falta ou excesso de caracteres; 4 = não contém nenhum número; 5 = não contém nenhuma letra maiúscula; 6 = não contém nenhuma letra minúscula
-
 $erro = [];
 
 //verifica se o campo nome está preenchido
 if (!empty($_POST['nome'])) {
     //se estiver preenchido, verifica o número de caracteres
     if ((strlen($_POST['nome'])) > 50) {
-        //erro excesso de caracteres
-        $erro[] = 1;
+        //erro de excesso de caracteres
+        $erro[] = 2;
     }
 }else {
-        //campo nome estar vazio
-        $erro[] = 2;
+    //erro de campo vazio
+    $erro[] = 1;
 }
 
 if (!empty($_POST['apelido'])) {
     //se estiver preenchido, verifica o número de caracteres
     if ((strlen($_POST['apelido'])) > 50) {
         //erro excesso de caracteres
-        $erro[] = 3;
+        $erro[] = 4;
     }
 }else {
-        //campo apelido estar vazio
-        $erro[] = 4;
+    //erro de campo vazio
+    $erro[] = 3;
 }
 
 if (!empty($_POST['username'])) {
     //se estiver preenchido, verifica o número de caracteres
     if ((strlen($_POST['username'])) > 20) {
         //erro excesso de caracteres
-        $erro[] = 5;
+        $erro[] = 6;
     }
 } else {
-        //campo username estar vazio
-        $erro[] = 6;
+    //erro de campo vazio
+    $erro[] = 5;
 }
 
 if (!empty($_POST['email'])) {
     //se estiver preenchido, verifica o número de caracteres
     if ((strlen($_POST['email'])) > 100) {
-        //erro excesso de caracteres
-        $erro[] = 7;
+        //erro de excesso de caracteres
+        $erro[] = 8;
     }
 } else {
-        //campo email estar vazio
-        $erro[] = 8;
+    //erro de campo vazio
+    $erro[] = 7;
 }
 
 if (!empty($_POST['password'])) {
     //se estiver preenchido, verifica o número de caracteres
     if ((strlen($_POST['password'])) < 8 || (strlen($_POST['password'])) > 12) {
-        //erro por falta ou excesso de caracteres
-        $erro[] = 9;
-    }
-}
-    /*elseif(!preg_match("#[0-9]+#",$password)) {
-        $erro_password = 3;
-    }
-    elseif(!preg_match("#[A-Z]+#",$password)) {
-        $erro_password = 4;
-    }
-    elseif(!preg_match("#[a-z]+#",$password)) {
-        $erro_password = 5;
-    }*/
-    else {
-        //campo password estar vazio
+        //erro de falta ou excesso de caracteres
         $erro[] = 10;
+    }
+    if (!preg_match("#[0-9]+#", $password)) {
+        $erro_password = 11;
+    }
+    if (!preg_match("#[A-Z]+#", $password)) {
+        $erro_password = 12;
+    }
+    if (!preg_match("#[a-z]+#", $password)) {
+        $erro_password = 13;
+    }
+}else {
+    //erro de campo vazio
+    $erro[] = 9;
 }
 
 if (!empty($_POST['cpassword'])) {
@@ -82,7 +78,8 @@ if (!empty($_POST['cpassword'])) {
     }
 }
 else {
-        $erro[] = 12;
+    // erro de campo vazio
+    $erro[] = 12;
 }
 
 var_dump($erro);
@@ -117,5 +114,3 @@ if(count($erro)==0) {
 else{
     header('Location: ../pages/login_register.php?'.$erro_query_string);
 }
-
-?>

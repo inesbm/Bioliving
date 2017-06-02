@@ -12,6 +12,8 @@
         echo $query[$n]."<br>";
     }
 
+    $lista_erros = []
+
 // }
 
 
