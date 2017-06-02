@@ -4,6 +4,7 @@
 
 <?php
 
+
 // if(count($_GET[])>0){
     $url = parse_url($_SERVER['REQUEST_URI']);
     parse_str($url['query'], $query);

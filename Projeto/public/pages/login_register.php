@@ -11,6 +11,7 @@
     <title>Projeto BioLiving - Login/Registo</title>
 </head>
 
+
 <body>
 
 <!--Side Navigation = Menu on Mobile -->
