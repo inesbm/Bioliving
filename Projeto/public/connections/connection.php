@@ -1,6 +1,7 @@
 <?php
 //	Define	as variáveis
-$hostname = "localhost";
+// $hostname = "localhost";
+$hostname = "labmm.clients.ua.pt";
 $username =	"deca_16L4_03_dbo";
 $password =	"oHFyoM";
 $dbname = "deca_16L4_03";

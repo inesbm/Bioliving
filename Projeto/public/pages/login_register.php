@@ -26,7 +26,7 @@
         <?php include_once "../components/user_login.php"?>
         </div>
         <div id="test2" class="col s12">
-        <?php include_once "../components/user_register.php"?>
+        <?php include_once "../components/user_register.php" ?>
         </div>
     </div>
 </div>

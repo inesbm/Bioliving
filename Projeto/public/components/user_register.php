@@ -2,6 +2,21 @@
 //include_once "../components/register_control.php";
 //?>
 
+<?php
+
+// if(count($_GET[])>0){
+    $url = parse_url($_SERVER['REQUEST_URI']);
+    parse_str($url['query'], $query);
+
+    for($n=0; $n<count($query); $n++){
+        echo $query[$n]."<br>";
+    }
+
+// }
+
+
+?>
+
 <!--FORMULÁRIO DE REGISTO-->
 
 <div class="row" xmlns="http://www.w3.org/1999/html">
@@ -10,7 +25,7 @@
             <div class="input-field col s6">
                 <input id="first_name" type="text" class="validate" name="nome">
                 <label for="first_name">Nome</label>
-                <span class="green-text">* <?php echo $erro_nome;?></span>
+                <span class="green-text"></span>
             </div>
             <div class="input-field col s6">
                 <input id="last_name" type="text" class="validate" name="apelido">
