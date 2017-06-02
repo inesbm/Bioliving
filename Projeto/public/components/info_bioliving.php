@@ -32,13 +32,13 @@
                         património arbóreo, garantindo a salvaguarda da saúde pública, a mobilidade, a estética urbana e
                         a biodiversidade da floresta, compromete-se a plantar seis árvores por cada uma que seja
                         retirada.</p>
-                    <span class="card-title margin-top-10">Título</span>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
-                    <div class="divider margin-top-10"></div>
-                    <span class="card-title margin-top-10">Título</span>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
+<!--                    <span class="card-title margin-top-10">Título</span>-->
+<!--                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient-->
+<!--                        because I require little markup to use effectively.</p>-->
+<!--                    <div class="divider margin-top-10"></div>-->
+<!--                    <span class="card-title margin-top-10">Título</span>-->
+<!--                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient-->
+<!--                        because I require little markup to use effectively.</p>-->
                 </div>
             </div>
         </div>

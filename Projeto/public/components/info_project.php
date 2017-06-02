@@ -24,21 +24,22 @@
                 <div class="card-image">
                 </div>
                 <div class="card-content">
-                    <span class="card-title">A Associação Bioliving</span>
-                    <p>A BioLiving, que tem sede em Frossos, em espaço cedido pela Autarquia, é uma associação que
-                        desenvolve atividades e oficinas ligadas à natureza, promove a sustentabilidade e recuperação de
-                        áreas florestais. O seu lema é “Natureza e Educação para todos”. A Câmara Municipal de
-                        Albergaria-a-Velha, por seu turno, consciente da necessidade em manter uma gestão sustentável do
-                        património arbóreo, garantindo a salvaguarda da saúde pública, a mobilidade, a estética urbana e
-                        a biodiversidade da floresta, compromete-se a plantar seis árvores por cada uma que seja
-                        retirada.</p>
-                    <span class="card-title margin-top-10">Título</span>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
-                    <div class="divider margin-top-10"></div>
-                    <span class="card-title margin-top-10">Título</span>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                        because I require little markup to use effectively.</p>
+                    <span class="card-title">Instantes</span>
+                    <p>Instantes é o projeto desenvolvido no âmbito das UCs de LabMM4 e Ergonomia dos Sistemas em parceria
+                        com a Associação BioLiving que visa sensibilizar o público para a plantação de árvores associando-as às
+                        suas memórias mais queridas. Tenciona assinalar os momentos especiais, como o nascimento de um filho,
+                        o dia do casamento, o início de uma nova etapa, a fundação de uma empresa, entre outros, através do
+                        apadrinhamento de uma árvore, criando um marco ambiental. É não só a plantação, mas também o acompanhamento
+                        do crescimento da árvore que irá criar uma ligação singular e emocional com natureza. Desta forma, a cada
+                        árvore plantada segundo este sistema está associada uma história única que queremos registar para que possa
+                        ser partilhada com quem a visita. Queremos construir florestas de memórias.</p>
+<!--                   <span class="card-title margin-top-10">Título</span>-->
+<!--                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient-->
+<!--                        because I require little markup to use effectively.</p>-->
+<!--                    <div class="divider margin-top-10"></div>-->
+<!--                    <span class="card-title margin-top-10">Título</span>-->
+<!--                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient-->
+<!--                        because I require little markup to use effectively.</p>-->
                 </div>
             </div>
         </div>

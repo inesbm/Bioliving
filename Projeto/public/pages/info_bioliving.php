@@ -17,7 +17,7 @@
 <?php include_once "../components/side_nav.php" ?>
 
 <!--Top Navigation-->
-<?php include_once "../components/top_nav_info_project.php" ?>
+<?php include_once "../components/top_nav_info_bioliving.php" ?>
 
 <!--Content (colocar aqui o componente)-->
 <?php include_once "../components/info_project.php" ?>
