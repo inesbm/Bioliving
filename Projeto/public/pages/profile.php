@@ -29,9 +29,6 @@ session_start();
         <div id="test1" class="col s12">
             <?php include_once "../components/profile_personal_data.php" ?>
         </div>
-        <div id="test2" class="col s12">
-            <?php include_once "../components/my_moments.php"?>
-        </div>
     </div>
 </div>
 

@@ -15,8 +15,7 @@
     <!--Tabs/ SubMenus-->
     <div class="nav-content">
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#produtos">Dados</a></li>
-            <li class="tab"><a href="#carrinho">Editar</a></li>
+            <li class="tab"><a href="">Dados Pessoais</a></li>
         </ul>
     </div>
 
