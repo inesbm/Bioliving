@@ -1,20 +1,21 @@
 <ul id="slide-out" class="side-nav">
     <li>
-
-            <?php
-                if (isset($_SESSION['user'])) {
-                    echo "
-                        <div class=\"userView\">
-                            <div class=\"background\">
-                                <img src=\"../../images/back.png\" style=\"width: 100%;\">
-                            </div>
-                            <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/user.jpg\"></a>
-                            <a href=\"#\"><span class=\"white-text name\">Ana</span></a>
-                            <a href=\"#\"><span class=\"white-text email\">ab@ua.pt</span></a>
+        <?php
+            if (isset($_SESSION['user'])) {
+                $email = $_SESSION['user'];
+                $username = $_SESSION['username'];
+                echo "
+                    <div class=\"userView\">
+                        <div class=\"background\">
+                            <img src=\"../../images/back.png\" style=\"width: 100%;\">
                         </div>
-                    ";
-                }
-            ?>
+                        <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/user.jpg\"></a>
+                        <a href=\"#\"><span class=\"white-text name\">$username</span></a>
+                        <a href=\"#\"><span class=\"white-text email\">$email</span></a>
+                    </div>
+                ";
+            }
+        ?>
     </li>
     <li><a href="info_project.php"><i class="material-icons">nature_people</i>O Projeto</a></li>
     <li><a href="moments_register.php"><i class="material-icons">add_circle</i>Registar Momento</a></li>
