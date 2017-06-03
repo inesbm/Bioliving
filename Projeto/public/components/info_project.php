@@ -4,16 +4,16 @@
         <div class="carousel-fixed-item center">
         </div>
         <div class="carousel-item  white-text materialboxed"
-             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/OMWR900.jpg'); background-size: cover; background-position: center;">
         </div>
         <div class="carousel-item  white-text materialboxed"
-             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/17991767_2006444569575585_8390700167120406156_o.jpg'); background-size: cover; background-position: center;">
         </div>
         <div class="carousel-item  white-text materialboxed"
-             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/18582184_2025558300997545_3141550223896757295_n.jpg'); background-size: cover; background-position: center;">
         </div>
         <div class="carousel-item  white-text materialboxed"
-             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/OMWR9V0.jpg'); background-size: cover; background-position: center;">
         </div>
     </div>
 

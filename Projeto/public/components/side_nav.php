@@ -9,8 +9,8 @@
                                 <img src=\"../../images/back.png\" style=\"width: 100%;\">
                             </div>
                             <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/user.jpg\"></a>
-                            <a href=\"#\"><span class=\"white-text name\">Associação Bioliving</span></a>
-                            <a href=\"#\"><span class=\"white-text email\">geral.bioliving@gmail.com</span></a>
+                            <a href=\"#\"><span class=\"white-text name\">Ana</span></a>
+                            <a href=\"#\"><span class=\"white-text email\">ab@ua.pt</span></a>
                         </div>
                     ";
                 }
