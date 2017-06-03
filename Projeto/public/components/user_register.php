@@ -1,28 +1,30 @@
 <?php
-//include_once "../components/register_control.php";
-//?>
 
-<?php
+//Conversão do URL numa lista.
 
+$query = [];
 
-// if(count($_GET[])>0){
-    $url = parse_url($_SERVER['REQUEST_URI']);
+$url = parse_url($_SERVER['REQUEST_URI']);
+
+if(isset($url['query'])){
     parse_str($url['query'], $query);
+}
 
-    for($n=0; $n<count($query); $n++){  // PROVISÓRIO
-        echo $query[$n]."<br>";
-    }
+//for($n=0; $n<count($query); $n++){  // PROVISÓRIO
+//echo $query[$n]."<br>";
 
- // Variáveis dos nomes
+// ERROS
 
-    $campo_nome = "";
-    $campo_apelido = "";
-    $campo_username = "";
-    $campo_email = "";
-    $campo_password = "";
-    $campo_cpassword = "";
+// Erros - variáveis dos campos
 
-// Verifica quais são os erros comunicados através do URL
+$campo_nome = "";
+$campo_apelido = "";
+$campo_username = "";
+$campo_email = "";
+$campo_password = "";
+$campo_cpassword = "";
+
+// Verifica quais são os erros comunicados através do URL.
 
 // CAMPO NOME
 if (in_array("1", $query)){
@@ -70,10 +72,37 @@ if (in_array("13", $query)){
 }
 // CAMPO CONFIRMAR PASSWORD
 if (in_array("14", $query)){
-    $campo_cpassword = "O campo email está vazio. Por favor, preencha-o.";
+    $campo_cpassword = "O campo confirmar password está vazio. Por favor, preencha-o.";
 }
 if (in_array("15", $query)){
     $campo_cpassword = "Os valores introduzidos nos campos password e confirmar password não são iguais.";
+}
+if (in_array("16", $query)){
+    $password = "Por favor, volte a preencher o campo password.";
+    $campo_cpassword = "Por favor, volte a preencher o campo confirmar password.";
+}
+
+//Registo inválido. Se o registo for inválido (informação que vem no URL), a variável $registo = "invalido".
+$registo = "";
+if(isset($_GET['registo'])){
+    $registo = "Registo inválido. O username escolhido já foi utilizado anteriormente."; // Em princípio, esse é o problema. (Mas esta solução deve ser alterada.)
+    $campo_cpassword = "Por favor, volte a preencher os campos password e confirmar password.";
+}
+
+//Lembrar dados introduzidos anteriormente.
+
+$nome = "";
+$apelido = "";
+$username = "";
+$email = "";
+$password = "";
+$cpassword = "";
+
+if(isset($_SESSION['nome'])){
+    $nome = $_SESSION['nome'];
+    $apelido = $_SESSION['apelido'];
+    $username = $_SESSION['username'];
+    $email = $_SESSION['email'];
 }
 
 ?>
@@ -81,29 +110,33 @@ if (in_array("15", $query)){
 <!--FORMULÁRIO DE REGISTO-->
 
 <div class="row" xmlns="http://www.w3.org/1999/html">
+    <!--Se o registo for inválido, $registo="invalido". Caso contrário, $registo ="". -->
+    <br>
+    <p class="green-text"><?= $registo ?></p>
+    <br>
     <form class="col s12" action="../components/register_control.php" method="post">
         <div class="row">
             <div class="input-field col s6">
-                <input id="first_name" type="text" class="validate" name="nome">
+                <input id="first_name" type="text" class="validate" name="nome" value=<?= $nome ?>>
                 <label for="first_name">Nome</label>
                 <span class="green-text"><?= $campo_nome ?></span>
             </div>
             <div class="input-field col s6">
-                <input id="last_name" type="text" class="validate" name="apelido">
+                <input id="last_name" type="text" class="validate" name="apelido" value=<?= $apelido ?>>
                 <label for="last_name">Apelido</label>
                 <span class="green-text"><?= $campo_apelido ?></span>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="username" type="text" class="validate" name="username">
+                <input id="username" type="text" class="validate" name="username" value=<?= $username ?>>
                 <label for="username">Username</label>
                 <span class="green-text"><?= $campo_username ?></span>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input id="email" type="email" class="validate" name="email">
+                <input id="email" type="email" class="validate" name="email" value=<?= $email ?>>
                 <label for="email">Email</label>
                 <span class="green-text"><?= $campo_email ?></span>
             </div>
@@ -118,21 +151,12 @@ if (in_array("15", $query)){
         <div class="row">
             <div class="input-field col s12">
                 <input id="password_confirmation" type="password" class="validate" name="cpassword">
-<!--FALTA CONFIRMAR SE A PASSWORD É IGUAL-->
                 <label for="password">Confirmação da Password</label>
                 <span class="green-text"><?= $campo_cpassword ?></span>
             </div>
         </div>
-<!--        <p class="green-text" id="msg_validacao_registo">-->
-<!--            --><?php
-//            if (isset($_GET['validacao']) && $_GET['validacao'] == 1) {
-//                echo "Registo efetuado com sucesso!";
-//            }
-//            if (isset($_GET['validacao']) && $_GET['validacao'] == 2) {
-//                echo "Registo não efetuado.";
-//            }
-//            ?>
-<!--        </p>-->
+<!--        <p class="green-text" id= "msg_validação_registo"> -->
+
         <div class="row">
             <div class="input-field col s12">
                 <input type="submit" name="register_form_submit" id="register_form_submit" class="waves-effect waves-light btn green" value="Submeter">

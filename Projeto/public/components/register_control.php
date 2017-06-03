@@ -1,60 +1,69 @@
 <?php
+
+session_start();
+
 //Ligação à BD
 require_once('../connections/connection.php');
 
-//VALIDAÇÃO
+//VALIDAÇÃO DO FORMULÁRIO
 
+//Lista de erros
 $erro = [];
 
-//verifica se o campo nome está preenchido
+//Verifica se o campo nome está preenchido.
 if (!empty($_POST['nome'])) {
-    //se estiver preenchido, verifica o número de caracteres
+    //Se estiver preenchido, verifica o número de caracteres.
     if ((strlen($_POST['nome'])) > 50) {
-        //erro de excesso de caracteres
+        //Erro de excesso de caracteres.
         $erro[] = 2;
     }
 }else {
-    //erro de campo vazio
+    //Erro de campo vazio.
     $erro[] = 1;
 }
 
+
+//Verifica se o campo apelido está preenchido.
 if (!empty($_POST['apelido'])) {
-    //se estiver preenchido, verifica o número de caracteres
+    //Se estiver preenchido, verifica o número de caracteres.
     if ((strlen($_POST['apelido'])) > 50) {
-        //erro excesso de caracteres
+        //Erro de excesso de caracteres.
         $erro[] = 4;
     }
 }else {
-    //erro de campo vazio
+    //Erro de campo vazio.
     $erro[] = 3;
 }
 
+//Verifica se o campo username está preenchido.
 if (!empty($_POST['username'])) {
-    //se estiver preenchido, verifica o número de caracteres
+    //Se estiver preenchido, verifica o número de caracteres.
     if ((strlen($_POST['username'])) > 20) {
-        //erro excesso de caracteres
+        //Erro de excesso de caracteres.
         $erro[] = 6;
     }
 } else {
-    //erro de campo vazio
+    //Erro de campo vazio.
     $erro[] = 5;
 }
 
+//Verifica se o campo email está preenchido.
 if (!empty($_POST['email'])) {
-    //se estiver preenchido, verifica o número de caracteres
+    //Se estiver preenchido, verifica o número de caracteres.
     if ((strlen($_POST['email'])) > 100) {
-        //erro de excesso de caracteres
+        //Erro de excesso de caracteres.
         $erro[] = 8;
     }
 } else {
-    //erro de campo vazio
+    //Erro de campo vazio.
     $erro[] = 7;
 }
 
+//Verifica se o campo passwords está preenchido.
 if (!empty($_POST['password'])) {
-    //se estiver preenchido, verifica o número de caracteres
+    //Se estiver preenchido, verifica o número de caracteres.
     if ((strlen($_POST['password'])) < 8 || (strlen($_POST['password'])) > 12) {
-        //erro de falta ou excesso de caracteres
+        //Erro de falta ou excesso de caracteres.
         $erro[] = 10;
     }
 
@@ -70,10 +79,11 @@ if (!empty($_POST['password'])) {
         $erro[] = 13;
     }
 }else {
-    //erro de campo vazio
+    //Erro de campo vazio.
     $erro[] = 9;
 }
 
+//Verifica se o campo confirmar password está preenchido.
 if (!empty($_POST['cpassword'])) {
     //se estiver preenchido, verifica se é igual ao campo password
     if ($_POST["password"] != $_POST["cpassword"]) {
@@ -81,16 +91,14 @@ if (!empty($_POST['cpassword'])) {
     }
 }
 else {
-    // erro de campo vazio
+    // Erro de campo vazio.
     $erro[] = 14;
 }
 
-var_dump($erro);
-
-$erro_query_string = http_build_query($erro);
-
+//Verifica se existem erros. Se não existirem, é feito registo.
 if(count($erro)==0) {
     //Registo do utilizador na BD
+
     $query = "INSERT INTO bioliving_users (nome, apelido, username, email, password) VALUES (?,?,?,?,?)";
 
     $stmt = mysqli_prepare($link, $query);
@@ -105,15 +113,34 @@ if(count($erro)==0) {
 
     if (mysqli_stmt_execute($stmt)) {
         mysqli_stmt_close($stmt);
-        //	Acção	de	sucesso
+        //	Registo válido.
+
+        session_unset();
+
         header('Location: ../pages/info_bioliving.php');
     } else {
         mysqli_stmt_close($stmt);
-        //	Acção	de	erro
-        //echo "Registo inválido.";
-        //header('Location: ../pages/login_register.php?validacao=2');
+        // Registo inválido.
+
+        $_SESSION['nome'] = $_POST['nome'];
+        $_SESSION['apelido'] = $_POST['apelido'];
+        $_SESSION['username'] = $_POST['username'];
+        $_SESSION['email'] = $_POST['email'];
+
+        header('Location: ../pages/login_register.php?registo=invalido');
     }
 }
 else{
+    $_SESSION['nome'] = $_POST['nome'];
+    $_SESSION['apelido'] = $_POST['apelido'];
+    $_SESSION['username'] = $_POST['username'];
+    $_SESSION['email'] = $_POST['email'];
+
+    if(!in_array("9", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("12", $erro) && !in_array("13", $erro) && !in_array("14", $erro) && !in_array("15", $erro)){
+        $erro[] = 16;
+    }
+
+    $erro_query_string = http_build_query($erro);
+
     header('Location: ../pages/login_register.php?'.$erro_query_string);
 }

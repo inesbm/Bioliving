@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <!--FORMULÁRIO DE LOGIN-->
 
 <div id="login" class="col s12">
