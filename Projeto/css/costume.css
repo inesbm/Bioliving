@@ -62,3 +62,11 @@
     height: 100%;
     margin-top: 0.3em;
 }
+
+/* footer position*/
+.page-footer {
+    position: static;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
