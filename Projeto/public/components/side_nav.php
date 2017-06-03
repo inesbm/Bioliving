@@ -3,15 +3,15 @@
         <?php
             if (isset($_SESSION['user'])) {
                 $email = $_SESSION['user'];
-                $username = $_SESSION['username'];
+                $nome = $_SESSION['name'];
+                $apelido = $_SESSION['apelido'];
                 echo "
                     <div class=\"userView\">
                         <div class=\"background\">
                             <img src=\"../../images/back.png\" style=\"width: 100%;\">
                         </div>
                         <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/user.jpg\"></a>
-                        <a href=\"#\"><span class=\"white-text name\">$username</span></a>
-                        <a href=\"#\"><span class=\"white-text email\">$email</span></a>
+                        <a href=\"#\"><span class=\"white-text name\">$nome $apelido</span></a>
                     </div>
                 ";
             }

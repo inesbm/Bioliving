@@ -8,20 +8,21 @@ session_start();
 //VALIDAÇÃO DO LOGIN
 $email = $_POST['email'];
 
-$query = "SELECT id_users, username, ref_id_roles, password, email FROM bioliving_users WHERE email=?";
+$query = "SELECT id_users, nome, apelido, ref_id_roles, password, email FROM bioliving_users WHERE email=?";
 
 $result = mysqli_prepare($link, $query);
 
 mysqli_stmt_bind_param($result, 's', $email);
 mysqli_stmt_execute($result);
-mysqli_stmt_bind_result($result, $user_id, $username, $role, $pass_hash, $email);
+mysqli_stmt_bind_result($result, $user_id, $nome, $apelido, $role, $pass_hash, $email);
 
 if (mysqli_stmt_fetch($result)) {
     if (password_verify($_POST['password'], $pass_hash)) {
         //	Guardar	dados	do	utilizador	em	sessão	e	acção	de	sucesso
 //        if (!isset($_SESSION['user'])) {
         $_SESSION['user'] = $email;
-        $_SESSION['username'] = $username;
+        $_SESSION['name'] = $nome;
+        $_SESSION['apelido'] = $apelido;
         $_SESSION['role'] = $role;
         header("Location: ../pages/profile.php");
     } else {
