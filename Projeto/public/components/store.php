@@ -42,6 +42,6 @@
 </div>
 <div class="row">
 <div id="carrinho" class="col s12 m12">
-    produtos no carrinho
+    Não tem produtos no carrinho.
 </div>
 </div>

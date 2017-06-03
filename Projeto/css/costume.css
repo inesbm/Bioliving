@@ -30,8 +30,8 @@
 }
 
 /* label focus color */
-.input-field input[type=password]:focus + label, .input-field input[type=email]:focus + label, .input-field input[type=text]:focus + label {
-    color: #4CAF50 !important;
+.input-field input[type=text]:focus + label {
+    color: #000;
 }
 
 /* label underline focus color */
@@ -61,54 +61,6 @@
 .logo {
     height: 100%;
     margin-top: 0.3em;
-}
-
-/*class="row"*/
-.row {
-    margin-top: 20px;
-}
-
-/*profile photo upload button*/
-.input-field-photo {
-    position: relative !important;
-    bottom: 25px !important;
-    left: 60px !important;
-    margin-top: 0 !important;
-    width: 200px;
-}
-
-/*Date picker*/
-.picker__date-display {
-    background-color: #4CAF50 !important;
-}
-
-.picker__day.picker__day--infocus.picker__day--selected.picker__day--highlighted {
-    background-color: #4CAF50 !important;
-}
-
-.picker__weekday-display {
-    background-color: #4CAF50 !important;
-}
-
-.picker__close, .picker__today {
-    color: #4CAF50 !important;
-}
-
-.picker__day.picker__day--today {
-    color: #4CAF50 !important;
-}
-
-.picker__day.picker__day--today.picker__day--selected {
-    color: #fff !important;
-}
-
-/*Profile changes*/
-.changes-btn {
-    font-size: 0.6rem !important;
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-    height: 2rem !important;
-    line-height: 2rem !important;
 }
 
 /* footer position*/

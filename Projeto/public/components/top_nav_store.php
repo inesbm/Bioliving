@@ -19,8 +19,8 @@
     <div class="nav-content">
         <ul class="tabs tabs-transparent">
             <li class="tab"><a href="#produtos">Produtos</a></li>
-            <li class="tab"><a href="#carrinho">Carrinho<span class="new badge green darken-4 white-text"
-                                                           data-badge-caption="">4</span></a></li>
+            <li class="tab"><a href="#carrinho">Carrinho
+                    <!--<span class="new badge green darken-4 white-text" data-badge-caption="">4</span>--></a></li>
         </ul>
     </div>
 </nav>
