@@ -22,6 +22,7 @@ if (mysqli_stmt_fetch($result)) {
 //        if (!isset($_SESSION['user'])) {
         $_SESSION['user'] = $email;
         $_SESSION['username'] = $username;
+        $_SESSION['role'] = $role;
         header("Location: ../pages/profile.php");
     } else {
         // Acção de erro nos dados de login
