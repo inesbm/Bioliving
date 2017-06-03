@@ -37,6 +37,58 @@
                     because I require little markup to use effectively.</p>
             </div>
         </div>
+
+        <!--Card for content-->
+        <div class="card">
+            <div class="card-image">
+                <img src="../../images/carvalho.PNG">
+            </div>
+            <div class="card-content">
+                <span>Árvores</span>
+                <span class="card-title">Carvalho</span>
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                    because I require little markup to use effectively.</p>
+            </div>
+        </div>
+
+        <!--Card for content-->
+        <div class="card">
+            <div class="card-image">
+                <img src="../../images/cedro.PNG">
+            </div>
+            <div class="card-content">
+                <span>Árvores</span>
+                <span class="card-title">Cedro</span>
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                    because I require little markup to use effectively.</p>
+            </div>
+        </div>
+
+        <!--Card for content-->
+        <div class="card">
+            <div class="card-image">
+                <img src="../../images/salgueiro.PNG">
+            </div>
+            <div class="card-content">
+                <span>Árvores</span>
+                <span class="card-title">Salgueiro</span>
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                    because I require little markup to use effectively.</p>
+            </div>
+        </div>
+
+        <!--Card for content-->
+        <div class="card">
+            <div class="card-image">
+                <img src="../../images/álamo.PNG">
+            </div>
+            <div class="card-content">
+                <span>Árvores</span>
+                <span class="card-title">Álamo</span>
+                <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                    because I require little markup to use effectively.</p>
+            </div>
+        </div>
     </div>
 </div>
 </div>
