@@ -22,6 +22,7 @@
     <li><a href="search.php"><i class="material-icons">search</i>Procurar Momentos</a></li>
     <li><a href="store.php"><i class="material-icons">local_offer</i>Loja</a></li>
     <li><a href="info_bioliving.php"><i class="material-icons">info</i>Associação BioLiving</a></li>
+    <li><a href="admin_area.php"><i class="material-icons">supervisor_account</i>Área de Administrador</a></li>
     <li>
         <div class="divider"></div>
     </li>
