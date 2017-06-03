@@ -19,5 +19,6 @@
     });
     $('#textarea1').trigger('autoresize');
     $('select').material_select('destroy');
+
 </script>
 
