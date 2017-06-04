@@ -1,10 +1,10 @@
 <?php
 // Ligação à BD 
 require_once('../connections/connection.php');
-require_once('../admin_area.php');
+require_once('../pages/admin_area.php');
 
 
-$query = "DELETE FROM users WHERE id_user=" . $id_user;
+$query = "DELETE FROM users WHERE id_user=".$id_user;
 $stmt = mysqli_prepare($link, $query);
 //mysqli_stmt_bind_param($stmt, 'i', $idClubes);
 
