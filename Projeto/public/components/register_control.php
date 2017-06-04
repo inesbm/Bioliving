@@ -35,22 +35,22 @@ if (!empty($_POST['apelido'])) {
     $erro[] = 3;
 }
 
-//Verifica se o campo username está preenchido.
-if (!empty($_POST['username'])) {
-    //Se estiver preenchido, verifica o número de caracteres.
-    if ((strlen($_POST['username'])) > 20) {
-        //Erro de excesso de caracteres.
-        $erro[] = 6;
-    }
-} else {
-    //Erro de campo vazio.
-    $erro[] = 5;
-}
+////Verifica se o campo username está preenchido.
+//if (!empty($_POST['username'])) {
+//    //Se estiver preenchido, verifica o número de caracteres.
+//    if ((strlen($_POST['username'])) > 20) {
+//        //Erro de excesso de caracteres.
+//        $erro[] = 6;
+//    }
+//} else {
+//    //Erro de campo vazio.
+//    $erro[] = 5;
+//}
 
 //Verifica se o campo email está preenchido.
 if (!empty($_POST['email'])) {
     //Se estiver preenchido, verifica o número de caracteres.
-    if ((strlen($_POST['email'])) > 100) {
+    if ((strlen($_POST['email'])) > 200) {
         //Erro de excesso de caracteres.
         $erro[] = 8;
     }
@@ -99,15 +99,14 @@ else {
 if(count($erro)==0) {
     //Registo do utilizador na BD
 
-    $query = "INSERT INTO bioliving_users (nome, apelido, username, email, password) VALUES (?,?,?,?,?)";
+    $query = "INSERT INTO users (nome, apelido, email, password) VALUES (?,?,?,?)";
 
     $stmt = mysqli_prepare($link, $query);
 
-    mysqli_stmt_bind_param($stmt, 'sssss', $nome, $apelido, $username, $email, $password);
+    mysqli_stmt_bind_param($stmt, 'ssss', $nome, $apelido, $email, $password);
 
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
-    $username = $_POST['username'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -124,7 +123,6 @@ if(count($erro)==0) {
 
         $_SESSION['nome'] = $_POST['nome'];
         $_SESSION['apelido'] = $_POST['apelido'];
-        $_SESSION['username'] = $_POST['username'];
         $_SESSION['email'] = $_POST['email'];
 
         header('Location: ../pages/login_register.php?registo=invalido');
@@ -133,7 +131,6 @@ if(count($erro)==0) {
 else{
     $_SESSION['nome'] = $_POST['nome'];
     $_SESSION['apelido'] = $_POST['apelido'];
-    $_SESSION['username'] = $_POST['username'];
     $_SESSION['email'] = $_POST['email'];
 
     if(!in_array("9", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("12", $erro) && !in_array("13", $erro) && !in_array("14", $erro) && !in_array("15", $erro)){

@@ -1,6 +1,5 @@
 <div class="row">
     <div class="col s12 m6 ">
-
         <!--Search box-->
         <nav>
             <div class="nav-wrapper green margin-top-10">

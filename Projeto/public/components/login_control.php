@@ -8,7 +8,7 @@ session_start();
 //VALIDAÇÃO DO LOGIN
 $email = $_POST['email'];
 
-$query = "SELECT id_users, nome, apelido, ref_id_roles, password, email FROM bioliving_users WHERE email=?";
+$query = "SELECT id_user, nome, apelido, ref_id_role, password, email FROM users WHERE email=?";
 
 $result = mysqli_prepare($link, $query);
 

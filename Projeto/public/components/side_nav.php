@@ -21,7 +21,7 @@
     <li><a href="info_project.php"><i class="material-icons">nature_people</i>O Projeto</a></li>
     <li><a href="moments_register.php"><i class="material-icons">add_circle</i>Registar Momento</a></li>
     <li><a href="moments.php"><i class="material-icons">photo_library</i>Ver Momentos</a></li>
-    <li><a href="search.php"><i class="material-icons">search</i>Procurar Momentos</a></li>
+    <li><a href="moments_search.php"><i class="material-icons">search</i>Procurar Momentos</a></li>
     <li><a href="store.php"><i class="material-icons">local_offer</i>Loja</a></li>
     <li><a href="info_bioliving.php"><i class="material-icons">info</i>Associação BioLiving</a></li>
     <li>

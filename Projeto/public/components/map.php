@@ -1,4 +1,8 @@
-<div id="map"></div>
+<div id="map">
+    <input id="search" type="search" required>
+    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+    <i class="material-icons">close</i>
+</div>
 <script>
     // Note: This example requires that you consent to location sharing when
     // prompted by your browser. If you see the error "The Geolocation service
@@ -7,8 +11,8 @@
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 40.500, lng: -15.500},
-            zoom: 6
+            center: {lat: 50.500, lng: -15.500},
+            zoom: 3
         });
 
         google.maps.event.addDomListener(map, 'click', function addMyMarker(e) { //function that will add markers on button click
