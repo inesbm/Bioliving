@@ -17,7 +17,7 @@
     <!--Tabs/ SubMenus-->
     <div class="nav-content">
         <ul class="tabs tabs-transparent">
-            <li class="tab"><a href="#test1">Login</a></li>
+            <li class="tab"><a href="#test1 ">Login</a></li>
             <li class="tab"><a href="#test2">Registo</a></li>
         </ul>
     </div>

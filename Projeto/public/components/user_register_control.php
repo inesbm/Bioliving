@@ -60,28 +60,28 @@ if (!empty($_POST['email'])) {
 }
 
 //Verifica se o campo passwords está preenchido.
-if (!empty($_POST['password'])) {
-    //Se estiver preenchido, verifica o número de caracteres.
-    if ((strlen($_POST['password'])) < 8 || (strlen($_POST['password'])) > 12) {
-        //Erro de falta ou excesso de caracteres.
-        $erro[] = 10;
-    }
-
-    $password = $_POST['password'] ;
-
-    if (!preg_match("#[0-9]+#", $password)) {
-        $erro[] = 11;
-    }
-    if (!preg_match("#[A-Z]+#", $password)) {
-        $erro[] = 12;
-    }
-    if (!preg_match("#[a-z]+#", $password)) {
-        $erro[] = 13;
-    }
-}else {
-    //Erro de campo vazio.
-    $erro[] = 9;
-}
+//if (!empty($_POST['password'])) {
+//    //Se estiver preenchido, verifica o número de caracteres.
+//    if ((strlen($_POST['password'])) < 8 || (strlen($_POST['password'])) > 12) {
+//        //Erro de falta ou excesso de caracteres.
+//        $erro[] = 10;
+//    }
+//
+//    $password = $_POST['password'] ;
+//
+//    if (!preg_match("#[0-9]+#", $password)) {
+//        $erro[] = 11;
+//    }
+//    if (!preg_match("#[A-Z]+#", $password)) {
+//        $erro[] = 12;
+//    }
+//    if (!preg_match("#[a-z]+#", $password)) {
+//        $erro[] = 13;
+//    }
+//}else {
+//    //Erro de campo vazio.
+//    $erro[] = 9;
+//}
 
 //Verifica se o campo confirmar password está preenchido.
 if (!empty($_POST['cpassword'])) {
