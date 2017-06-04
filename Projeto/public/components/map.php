@@ -12,7 +12,7 @@
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 40.000, lng: -8.000},
-            zoom: 5
+            zoom: 7
         });
 
 //        google.maps.event.addDomListener(map, 'click', function addMyMarker(e) { //function that will add markers on button click
