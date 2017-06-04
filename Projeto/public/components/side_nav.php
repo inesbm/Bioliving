@@ -42,7 +42,7 @@
         if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
             echo "<li><a href=\"../pages/admin_area.php\"><i class=\"material-icons\">supervisor_account</i>Área de Administrador</a></li>";
         }
-        echo ">directions_walk</i>Logout</a></li>";
+        echo "<li><a href=\"../components/user_logout.php\"><i class=\"material-icons\">directions_walk</i>Logout</a></li>";
     }
     ?>
 </ul>
