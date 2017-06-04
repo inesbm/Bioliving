@@ -1,9 +1,21 @@
 <!--Avatar-->
 <div id="profile_photo" class="col s12">
     <div class="row">
-        <div class="userView">
-            <img src="../../images/user.jpg" class="circle" height="100px" ">
-        </div>
+            <?php
+            if (isset($_SESSION['user'])) {
+                $genero = $_SESSION['genero'];
+                if ($genero == "m") {
+                    $avatar = "avatar_man.png";
+                } else {
+                    $avatar = "avatar_woman.png";
+                }
+                echo "
+                    <div class=\"userView\">
+                        <img src=\"../../images/$avatar\" class=\"circle\" height=\"100px\">
+                    </div>
+                ";
+            }
+            ?>
         <div id="personal_data" class="input-field-photo">
             <div class="btn-floating btn waves-effect waves-light green file-field">
                 <i class="material-icons">mode_edit</i>
