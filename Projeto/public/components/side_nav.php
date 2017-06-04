@@ -35,14 +35,14 @@
     </li>
     <?php
         if (!isset($_SESSION['user'])) {
-            echo "<li><a href=\"../pages/login_register.php\"><i class=\"material-icons\">directions_walk</i>Login</a></li>";
+            echo "<li><a href=\"../pages/login_register.php\"><i class=\"material-icons\">directions_walk</i>Login/Registo</a></li>";
             }
     else {
         echo "<li><a href=\"profile.php\"><i class=\"material-icons\">person</i>Perfil</a></li>";
         if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {
             echo "<li><a href=\"../pages/admin_area.php\"><i class=\"material-icons\">supervisor_account</i>Área de Administrador</a></li>";
         }
-        echo "<li><a href=\"../components/logout.php\"><i class=\"material-icons\">directions_walk</i>Logout</a></li>";
+        echo ">directions_walk</i>Logout</a></li>";
     }
     ?>
 </ul>

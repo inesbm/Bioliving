@@ -2,7 +2,7 @@
 
 <div id="login" class="col s12">
     <div class="row">
-        <form class="col s12" action="../components/login_control.php" method="post">
+        <form class="col s12" action="user_login_control.php" method="post">
             <div class="input-field col s12">
                 <input id="email" type="email" class="validate" name="email">
                 <label for="email">Email</label>

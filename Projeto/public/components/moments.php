@@ -5,14 +5,14 @@
             <!--Card for content-->
             <div class="card">
                 <div class="card-image">
-                    <img src="../../images/back.png">
+                    <img src="../../images/back_small.jpg">
                     <a class="btn-floating halfway-fab waves-effect waves-light btn-large"><img class="circle"
-                                                                                                src="../../images/user.jpg"></a>
+                                                                                                src="../../images/avatar_woman.png"></a>
                 </div>
                 <div class="card-content">
-                    <span>19-05-1996 às 23h00</span>
+                    <span>06-09-2014 às 14h10</span>
                     <span class="card-title">Nascimento do Francisco</span>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                    <p>I am good at containing small bits of information. I am convenient
                         because I require little markup to use effectively.</p>
                     <p>
                         <span><i class="material-icons tiny">favorite</i> 43</span>
@@ -42,14 +42,14 @@
             <!--Card for content-->
             <div class="card">
                 <div class="card-image">
-                    <img src="../../images/back.png">
+                    <img src="../../images/back_small.jpg">
                     <a class="btn-floating halfway-fab waves-effect waves-light btn-large"><img class="circle"
-                                                                                                src="../../images/user.jpg"></a>
+                                                                                                src="../../images/avatar_woman.png"></a>
                 </div>
                 <div class="card-content">
-                    <span>19-05-1996 às 23h00</span>
+                    <span>06-09-2014 às 14h10</span>
                     <span class="card-title">Nascimento do Francisco</span>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                    <p>I am good at containing small bits of information. I am convenient
                         because I require little markup to use effectively.</p>
                     <p>
                         <span><i class="material-icons tiny">favorite</i> 43</span>
@@ -79,14 +79,14 @@
             <!--Card for content-->
             <div class="card">
                 <div class="card-image">
-                    <img src="../../images/back.png">
-                    <a class="btn-floating halfway-fab waves-effect waves-light btn-large" href="moments_detail.php"><img class="circle"
-                                                                                                src="../../images/user.jpg"></a>
+                    <img src="../../images/back_small.jpg">
+                    <a class="btn-floating halfway-fab waves-effect waves-light btn-large"><img class="circle"
+                                                                                                src="../../images/avatar_woman.png"></a>
                 </div>
                 <div class="card-content">
-                    <span>19-05-1996 às 23h00</span>
+                    <span>06-09-2014 às 14h10</span>
                     <span class="card-title">Nascimento do Francisco</span>
-                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                    <p>I am good at containing small bits of information. I am convenient
                         because I require little markup to use effectively.</p>
                     <p>
                         <span><i class="material-icons tiny">favorite</i> 43</span>

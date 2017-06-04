@@ -15,7 +15,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/t-shirt.png">
+                <img src="../../images/t-shirt_small.png">
             </div>
             <div class="card-content">
                 <span>Vestuário</span>
@@ -28,7 +28,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/t-shirt2.png">
+                <img src="../../images/t-shirt2_small.png">
             </div>
             <div class="card-content">
                 <span>Vestuário</span>
@@ -93,7 +93,7 @@
 </div>
 </div>
 <div class="row">
-<div id="carrinho" class="col s12 m12">
-    Não tem produtos no carrinho.
+<div id="carrinho" class="col s12 m12 center">
+    <p class="valign">Não tem produtos no carrinho.</p>
 </div>
 </div>

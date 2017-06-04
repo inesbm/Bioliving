@@ -63,10 +63,11 @@
     margin-top: 0.3em;
 }
 
-/*class="row"*/
+/*
 .row {
     margin-top: 20px;
 }
+*/
 
 /*profile photo upload button*/
 .input-field-photo {
@@ -154,4 +155,8 @@ span.radio_label {
 .switch label input[type=checkbox]:checked + .lever:after {
     background-color: #4CAF50 !important;
     left: 24px;
+}
+
+.brand-logo {
+    font-size: 1.5em !important;
 }

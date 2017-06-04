@@ -22,7 +22,7 @@ session_start();
 <?php include_once "../components/side_nav.php" ?>
 
 <!--Top Navigation-->
-<?php include_once "../components/top_nav.php" ?>
+<?php include_once "../components/top_nav_model.php" ?>
 
 <!--Page 1 of Tabs/Submenus-->
 <div id="test1" class="col s12 min-height">

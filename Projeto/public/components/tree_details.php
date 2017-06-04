@@ -3,16 +3,16 @@
     <div class="carousel carousel-slider center" data-indicators="true" style="width: 100vw">
         <div class="carousel-fixed-item center">
         </div>
-        <div class="carousel-item  white-text materialboxed"
+        <div class="carousel-item  white-text"
              style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
-        <div class="carousel-item  white-text materialboxed"
+        <div class="carousel-item  white-text "
              style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
-        <div class="carousel-item  white-text materialboxed"
+        <div class="carousel-item  white-text "
              style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
-        <div class="carousel-item  white-text materialboxed"
+        <div class="carousel-item  white-text"
              style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
     </div>

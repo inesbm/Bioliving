@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="3ee58fa2-4172-42d8-b5b0-3c450aa41d5f" name="labmm4" url="http://labmm.clients.ua.pt/deca_16L4/deca_16L4_09/Bioliving">
-        <fileTransfer host="labmm.clients.ua.pt" port="21" rootFolder="/deca_16L4_09/Bioliving" username="deca_16L4_03" password="dfc5dfe2dfecdfd3dfc5dfe7">
+      <webServer id="3ee58fa2-4172-42d8-b5b0-3c450aa41d5f" name="labmm4" url="http://labmm.clients.ua.pt/deca_16L4/deca_16L4_05">
+        <fileTransfer host="labmm.clients.ua.pt" port="21" rootFolder="/deca_16L4_05" username="deca_16L4_03" password="dfc5dfe2dfecdfd3dfc5dfe7">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
           </advancedOptions>
