@@ -114,7 +114,7 @@ if(isset($_SESSION['nome'])){
 <div class="row" xmlns="http://www.w3.org/1999/html">
     <!--Se o registo for inválido, $registo="invalido". Caso contrário, $registo ="". -->
     <p class="green-text"><?= $registo ?></p>
-    <form class="col s12" action="../components/user_register_control.php" method="post">
+    <form class="col s12" action="../components/register_control.php" method="post">
         <div class="row">
             <div class="input-field col s6">
                 <input id="first_name" type="text" class="validate" name="nome" value=<?= $nome ?>>

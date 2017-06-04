@@ -8,7 +8,7 @@
 <!--                <label for="email">Email</label>-->
 <!--            </div>-->
             <!--ALTERADO O TYPE PARA TEXT PATRA PERMITIR O LOGIN NOS TERMOS EXIGIDOS PARA A APRESENTAÇÃO DO PROJETO-->
-        <form class="col s12" action="user_login_control.php" method="post">
+        <form class="col s12" action="login_control.php" method="post">
             <div class="input-field col s12">
                 <input id="email" type="text" class="validate" name="email">
                 <label for="email">Email</label>
