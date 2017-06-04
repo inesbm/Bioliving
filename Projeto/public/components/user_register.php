@@ -19,6 +19,7 @@ if(isset($url['query'])){
 
 $campo_nome = "";
 $campo_apelido = "";
+$campo_genero = "";
 //$campo_username = "";
 $campo_email = "";
 $campo_password = "";
@@ -93,6 +94,7 @@ if(isset($_GET['registo'])){
 
 $nome = "";
 $apelido = "";
+$genero = "";
 //$username = "";
 $email = "";
 $password = "";
@@ -111,9 +113,7 @@ if(isset($_SESSION['nome'])){
 
 <div class="row" xmlns="http://www.w3.org/1999/html">
     <!--Se o registo for inválido, $registo="invalido". Caso contrário, $registo ="". -->
-    <br>
     <p class="green-text"><?= $registo ?></p>
-    <br>
     <form class="col s12" action="../components/register_control.php" method="post">
         <div class="row">
             <div class="input-field col s6">
@@ -126,6 +126,20 @@ if(isset($_SESSION['nome'])){
                 <label for="last_name">Apelido</label>
                 <span class="green-text"><?= $campo_apelido ?></span>
             </div>
+        </div>
+        <div class="row radio_genero">
+            <span class="radio_label">Género:</span>
+        </div>
+        <div class="row radio_genero">
+            <p>
+                <input name="genero" type="radio" value="m" id="genero_masculino" />
+                <label for="genero_masculino">Masculino</label>
+            </p>
+            <p>
+                <input name="genero" type="radio" value="f" id="genero_feminino" />
+                <label for="genero_feminino">Feminino</label>
+            </p>
+            <span class="green-text"><?= $campo_genero ?></span>
         </div>
         <div class="row">
             <div class="input-field col s12">

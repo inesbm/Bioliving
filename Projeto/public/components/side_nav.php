@@ -5,14 +5,20 @@
                 $email = $_SESSION['user'];
                 $nome = $_SESSION['name'];
                 $apelido = $_SESSION['apelido'];
+                $genero = $_SESSION['genero'];
+                if ($genero == "m") {
+                    $avatar = "avatar_man.png";
+                } else {
+                    $avatar = "avatar_woman.png";
+                }
                 echo "
                     <div class=\"userView\">
                         <div class=\"background\">
                             <img src=\"../../images/back.png\" style=\"width: 100%;\">
                         </div>
-                        <!--- distinguir avatar consoante seja homem ou mulher --->
-                        <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/avatar_man.png\"></a>
-                        <a href=\"#\"><span class=\"white-text name\">$nome $apelido</span></a>
+//                        <!--- distinguir avatar consoante seja homem ou mulher --->
+                        <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/$avatar\"></a>
+                        <a href=\"#\"><span class=\"white-text name\">$nome $apelido</span></a><br>
                     </div>
                 ";
             }
