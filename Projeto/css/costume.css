@@ -135,3 +135,23 @@ span.radio_label {
 [type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
     border: 2px solid #4CAF50 !important;
 }
+
+/*Switch colour*/
+
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #4CAF50 !important;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #4CAF50 !important;
+    left: 24px;
+}
+
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #4CAF50 !important;
+}
+
+.switch label input[type=checkbox]:checked + .lever:after {
+    background-color: #4CAF50 !important;
+    left: 24px;
+}
