@@ -1,13 +1,13 @@
-<div class="row">
-    <div class="col s12 m6 ">
-        <!--Search box-->
-        <div class="input-field col s12">
-            <i class="material-icons prefix">search</i>
-            <input type="text" id="autocomplete-input" class="autocomplete">
-            <label for="autocomplete-input">Utilizador</label>
-        </div>
-    </div>
-</div>
+<!--<div class="row">-->
+<!--    <div class="col s12 m6 ">-->
+<!--        <!--Search box-->
+<!--        <div class="input-field col s12">-->
+<!--            <i class="material-icons prefix">search</i>-->
+<!--            <input type="text" id="autocomplete-input" class="autocomplete">-->
+<!--            <label for="autocomplete-input">Utilizador</label>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
 
 
 <div class="row">
@@ -42,6 +42,7 @@
                     //Variáveis
                     $nome = $row_result["nome"];
                     $apelido = $row_result["apelido"];
+                    $id_user = $row_result["id_user"];
 
                     echo "
                         <div class=\"row\">
@@ -57,7 +58,7 @@
                                             Administrador
                                         </label>
                                     </div>
-                                    <a href=\"admin_area_delete_user.php\" class=\"secondary-content\"><i class=\"material-icons green-text\">close</i></a>
+                                    <a href=\"../components/admin_area_delete_user.php?=$id_user\" class=\"secondary-content\"><i class=\"material-icons green-text\">close</i></a>
 				                </li>
 				            </ul>
                         </div>
