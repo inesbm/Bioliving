@@ -1,17 +1,11 @@
 <div class="row">
     <div class="col s12 m6 ">
         <!--Search box-->
-        <nav>
-            <div class="nav-wrapper green margin-top-10">
-                <form>
-                    <div class="input-field">
-                        <input id="search" type="search" required>
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
-                    </div>
-                </form>
-            </div>
-        </nav>
+        <div class="input-field col s12">
+            <i class="material-icons prefix">search</i>
+            <input type="text" id="autocomplete-input" class="autocomplete">
+            <label for="autocomplete-input">Utilizador</label>
+        </div>
     </div>
 </div>
 
@@ -20,9 +14,19 @@
     <form class="col s12 m12">
         <div class="card">
             <div class="card-content">
-                <span class="card-title">Utilizadores</span>
-
                 <?php
+
+                // Condição Avatar
+
+                //if (isset($_SESSION['user'])) {
+                //$genero = $_SESSION['genero'];
+                //if ($genero == "f") {
+                //$avatar = "avatar_woman.png";
+                //} else {
+                //$avatar = "avatar_man.png";
+                //}
+                //}
+
                 // Ligação à BD 
                 require_once('../connections/connection.php');
 
@@ -53,7 +57,7 @@
                                             Administrador
                                         </label>
                                     </div>
-                                    <a href=\"admin_area_delete_user.php\" class=\"secondary-content\"><i class=\"material-icons\">close</i></a>
+                                    <a href=\"admin_area_delete_user.php\" class=\"secondary-content\"><i class=\"material-icons green-text\">close</i></a>
 				                </li>
 				            </ul>
                         </div>
