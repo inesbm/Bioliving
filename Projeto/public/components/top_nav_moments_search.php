@@ -24,13 +24,25 @@
 </nav>
 
 <nav>
-    <div class="nav-wrapper green">
+    <div class="nav-wrapper white">
         <form>
             <div class="input-field">
-                <input id="search" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                <i class="material-icons">close</i>
+                <input class="grey-text text-darken-3" id="search" type="search" required value="Inserir o id ou o local" onfocus="apagarvalue()" onblur="reporvalue()">
+                <label class="label-icon" for="search"><i class="material-icons grey-text text-darken-3" style="opacity: 2">search</i></label>
             </div>
         </form>
     </div>
 </nav>
+
+<script>
+    function apagarvalue() {
+
+        document.getElementById('search').value = "";
+
+    }
+    function reporvalue() {
+
+        document.getElementById('search').value = "Inserir o id ou o local";
+
+    }
+</script>
