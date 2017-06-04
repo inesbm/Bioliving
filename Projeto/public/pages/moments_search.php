@@ -8,11 +8,9 @@
     <!--Import map.css-->
     <?php include_once "../helpers/map.php" ?>
 
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-
     <!--Let browser know website is optimized for mobile-->
     <?php include_once "../helpers/meta.php" ?>
+
     <title>Projeto BioLiving - Procurar Momentos</title>
 </head>
 
@@ -23,9 +21,6 @@
 
 <!--Top Navigation-->
 <?php include_once "../components/top_nav_moments_search.php" ?>
-
-<!--Content (Search)-->
-<?php include_once "../components/search.php" ?>
 
 <!--Content (Mapa)-->
 

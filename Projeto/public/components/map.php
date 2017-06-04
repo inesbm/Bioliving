@@ -11,22 +11,21 @@
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-            center: {lat: 50.500, lng: -15.500},
-            zoom: 3
+            center: {lat: 40.000, lng: -8.000},
+            zoom: 5
         });
 
-        google.maps.event.addDomListener(map, 'click', function addMyMarker(e) { //function that will add markers on button click
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(e.latLng.lat(), e.latLng.lng()),
-                map: map,
-                draggable: true,
-                animation: google.maps.Animation.DROP,
-                title: "This a new tree!",
-                icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
-            })});
+//        google.maps.event.addDomListener(map, 'click', function addMyMarker(e) { //function that will add markers on button click
+//            var marker = new google.maps.Marker({
+//                position: new google.maps.LatLng(e.latLng.lat(), e.latLng.lng()),
+//                map: map,
+//                draggable: true,
+//                animation: google.maps.Animation.DROP,
+//                title: "This a new tree!",
+//                icon: "http://maps.google.com/mapfiles/ms/micons/blue.png"
+//            })});
 
         var infoWindow = new google.maps.InfoWindow({map: map});
-
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {

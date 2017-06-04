@@ -86,7 +86,7 @@ if (in_array("16", $query)){
 //Registo inválido. Se o registo for inválido (informação que vem no URL), a variável $registo = "invalido".
 $registo = "";
 if(isset($_GET['registo'])){
-    $registo = "Registo inválido. O username escolhido já foi utilizado anteriormente."; // Em princípio, esse é o problema. (Mas esta solução deve ser alterada.)
+    $registo = "Registo inválido. O email escolhido já foi utilizado anteriormente."; // Em princípio, esse é o problema. (Mas esta solução deve ser alterada.)
     $campo_cpassword = "Por favor, volte a preencher os campos password e confirmar password.";
 }
 

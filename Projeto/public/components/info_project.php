@@ -24,7 +24,7 @@
                 <div class="card-image">
                 </div>
                 <div class="card-content">
-                    <span class="card-title">Instantes</span>
+                    <span class="card-title">Momentos</span>
                     <p>Instantes é um projeto desenvolvido no âmbito das UCs de LabMM4 e Ergonomia dos Sistemas em parceria
                         com a Associação BioLiving que visa sensibilizar o público para a plantação de árvores associando-as às
                         suas memórias mais queridas. Tenciona assinalar os momentos especiais, como o nascimento de um filho,
