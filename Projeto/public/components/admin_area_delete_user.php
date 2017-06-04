@@ -12,4 +12,4 @@ mysqli_stmt_execute($stmt);
 
 mysqli_stmt_close($stmt);
 
-//header('Location: ../pages/admin_area.php');
+header('Location: ../pages/admin_area.php');

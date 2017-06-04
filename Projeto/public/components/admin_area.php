@@ -11,7 +11,7 @@
 
 
 <div class="row">
-    <form class="col s12 m12">
+    <form class="col s12 m12" method="post">
         <div class="card">
             <div class="card-content">
                 <?php
@@ -58,7 +58,18 @@
                                             Administrador
                                         </label>
                                     </div>
-                                    <a href=\"../components/admin_area_delete_user.php?id=$id_user\" class=\"secondary-content\"><i class=\"material-icons green-text\">close</i></a>
+                                    <a href='#modal1' class=\"secondary-content\"><i class=\"material-icons green-text\">close</i></a>
+                                    <!-- Modal Structure -->
+                                    <div id=\"modal1\" class=\"modal\">
+                                        <div class=\"modal-content\">
+                                            <h4>Atenção</h4>
+                                            <p>Tem a certeza que quer eliminar este utilizador permanentemente?</p>
+                                        </div>
+                                        <div class=\"modal-footer\">
+                                            <a href=\"../components/admin_area_delete_user.php?id=$id_user\" class=\"modal-action modal-close waves-effect waves-green btn-flat\">Sim</a>
+                                            <a href='admin_area.php' class='modal-action modal-close waves-effect waves-green btn-flat'>Não</a>
+                                        </div>
+                                    </div>
 				                </li>
 				            </ul>
                         </div>
