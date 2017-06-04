@@ -58,7 +58,7 @@
                                             Administrador
                                         </label>
                                     </div>
-                                    <a href=\"../components/admin_area_delete_user.php?=$id_user\" class=\"secondary-content\"><i class=\"material-icons green-text\">close</i></a>
+                                    <a href=\"../components/admin_area_delete_user.php?id=$id_user\" class=\"secondary-content\"><i class=\"material-icons green-text\">close</i></a>
 				                </li>
 				            </ul>
                         </div>
