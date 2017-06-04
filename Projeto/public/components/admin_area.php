@@ -65,6 +65,7 @@
                                             <h4>Atenção</h4>
                                             <p>Tem a certeza que quer eliminar este utilizador permanentemente?</p>
                                         </div>
+                                        
                                         <div class=\"modal-footer\">
                                             <a href=\"../components/admin_area_delete_user.php?id=$id_user\" class=\"modal-action modal-close waves-effect waves-green btn-flat\">Sim</a>
                                             <a href='admin_area.php' class='modal-action modal-close waves-effect waves-green btn-flat'>Não</a>
