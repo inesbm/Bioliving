@@ -11,7 +11,7 @@
 
 
 <div class="row">
-    <form class="col s12 m12" method="post">
+    <form class="col s12 m12">
         <div class="card">
             <div class="card-content">
                 <?php
@@ -31,7 +31,7 @@
                 require_once('../connections/connection.php');
 
                 // Definir a query
-                $query = "SELECT nome, apelido, id_user FROM users ORDER BY nome, apelido ASC";
+                $query = "SELECT nome, apelido, id_user, ref_id_role FROM users ORDER BY nome, apelido ASC";
 
                 // Extrair dados da BD 
                 $result = mysqli_query($link, $query);
@@ -43,6 +43,7 @@
                     $nome = $row_result["nome"];
                     $apelido = $row_result["apelido"];
                     $id_user = $row_result["id_user"];
+                    $role = $row_result["ref_id_role"];
 
                     echo "
                         <div class=\"row\">
@@ -53,6 +54,7 @@
                                     <div class=\"switch\">
                                         <label>
                                             Normal
+                                            <a href='../components/admin_area_change_role.php?role=$role'></a>
                                                 <input type=\"checkbox\">
                                                 <span class=\"lever\"></span>
                                             Administrador
