@@ -27,7 +27,7 @@
                 require_once('../connections/connection.php');
 
                 // Definir a query
-                $query = "SELECT nome, apelido, id_user FROM users ORDER BY nome ASC";
+                $query = "SELECT nome, apelido, id_user FROM users ORDER BY nome, apelido ASC";
 
                 // Extrair dados da BD 
                 $result = mysqli_query($link, $query);
