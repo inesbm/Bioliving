@@ -12,5 +12,11 @@
                                </ul>
         -->
     </div>
-
+    <!--Tabs/ SubMenus-->
+    <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#bioliving1 ">Contactos</a></li>
+            <li class="tab"><a href="#bioliving2">Sobre</a></li>
+        </ul>
+    </div>
 </nav>

@@ -18,7 +18,7 @@
                 <label for="password">Password</label>
             </div>
             <p>
-                <input type="checkbox" class="remember" id="remember"/>
+                <input type="checkbox" class="remember" name="remember" id="remember"/>
                 <label for="remember">Lembrar-me</label>
             </p>
             <p class="green-text" id="msg_erro_login">

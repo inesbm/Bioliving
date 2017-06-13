@@ -24,7 +24,16 @@ session_start();
 <?php include_once "../components/top_nav_info_bioliving.php" ?>
 
 <!--Content (colocar aqui o componente)-->
-<?php include_once "../components/info_bioliving.php" ?>
+<div class="row">
+    <div class="col s12 m12">
+        <div id="bioliving1" class="col s12">
+            <?php include_once "../components/bioliving_contacts.php" ?>
+        </div>
+        <div id="bioliving2" class="col s12">
+            <?php include_once "../components/info_bioliving.php" ?>
+        </div>
+    </div>
+</div>
 
 <!--Footer-->
 <?php include_once "../components/footer.php" ?>

@@ -160,3 +160,21 @@ span.radio_label {
 .brand-logo {
     font-size: 1.5em !important;
 }
+
+/*hiperlink "ler mais..."*/
+.readmore {
+    width: auto;
+}
+.readmore .moreText {
+    display: none;
+}
+.readmore a.more {
+    display: block;
+}
+
+/*mapa localização Bioliving*/
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}

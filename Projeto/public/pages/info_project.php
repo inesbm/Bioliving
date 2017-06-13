@@ -32,5 +32,8 @@ session_start();
 <!--Import jQuery before materialize.js-->
 <?php include_once "../helpers/jquery_js.php" ?>
 
+<!--Import js -->
+<script type="text/javascript" src="../../js/js_costume.js"></script>
+
 </body>
 </html>
