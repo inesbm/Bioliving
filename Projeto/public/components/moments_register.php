@@ -7,10 +7,7 @@ require_once('../connections/connection.php');
 <div class="row">
     <form class="col s12 m12" action="../components/moments_register_control.php" method="post">
 
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">1. Identificação</span>
-                <p></p>
+                <h4>1. Identificação</h4>
                 <div class="row">
                     <div class="input-field col s12">
                         <input id="moment_name" name="moment_name" data-error="<?= $moment_name ?>" data-success="right"
@@ -32,11 +29,7 @@ require_once('../connections/connection.php');
                         <label for="moment_story">História</label>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">2. Planeamento</span>
+                <h4>2. Planeamento</h4>
 
                 <div class="row">
                     <div class="input-field col s12" disabled>
@@ -51,8 +44,6 @@ require_once('../connections/connection.php');
                             </optgroup>
                         </select>
                         <label>Local</label>
-                    </div>
-                </div>
                 <!--<a href="tree_details.php">árvore 1</a>-->
                 <div class="row">
                     <div class="input-field col s8">
@@ -63,7 +54,7 @@ require_once('../connections/connection.php');
                             <option value="3" data-icon="../../images/cedro.PNG" class="circle">Cedro</option>
 
                         <?php
-/*
+
                             // Definir a query
                             $query = "SELECT id_arvores, nome, imagem FROM arvores";
 
@@ -85,7 +76,7 @@ require_once('../connections/connection.php');
                             // Fechar ligação à BD 
                             mysqli_close($link);
 
-                            */?>
+                            ?>
 
                         </select>
                     </div>
@@ -118,11 +109,9 @@ require_once('../connections/connection.php');
 
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-content">
-                <span class="card-title">3. Pagamento</span>
+
+
+                <h4>3. Pagamento</h4>
                 <ul class="collection">
                     <li class="collection-item avatar">
                         <img src="../../images/imagem1.png" alt="" class="circle">

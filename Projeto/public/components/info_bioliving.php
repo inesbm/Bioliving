@@ -33,6 +33,14 @@
                         a biodiversidade da floresta, compromete-se a plantar seis árvores por cada uma que seja
                         retirada.
                     </p>
+                        áreas florestais. O seu lema é “Natureza e Educação para todos”. </p>
+                    <span class="card-title margin-top-10">Fauna e Flora</span>
+                    <p>Consciente da necessidade em manter uma gestão sustentável do
+                        património arbóreo, a Bioliving compromete-se a plantar seis árvores por cada uma que seja
+                        retirada assim como recuperar e manter habitats.</p>
+                    <div class="divider margin-top-10"></div>
+                    <span class="card-title margin-top-10">Educação</span>
+                    <p>Até ao momento a Bioliving já atribuiu 3 bolsas de estudo e pretende continuar a defender que a educação é para todos.</p>
                 </div>
             </div>
         </div>

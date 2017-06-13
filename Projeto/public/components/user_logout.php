@@ -6,4 +6,4 @@ session_start();
 session_destroy();
 //session_destroy($_SESSION['user']);
 
-header('Location: ../pages/info_project.php');
+header('Location: ../pages/moments.php');

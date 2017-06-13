@@ -20,12 +20,12 @@ if (mysqli_stmt_fetch($result)) {
     if (password_verify($_POST['password'], $pass_hash)) {
         //	Guardar	dados	do	utilizador	em	sessão	e	acção	de	sucesso
 //        if (!isset($_SESSION['user'])) {
-
         $_SESSION['user'] = $email;
         $_SESSION['nome'] = $nome;
         $_SESSION['apelido'] = $apelido;
         $_SESSION['genero'] = $genero;
         $_SESSION['role'] = $role;
+        header("Location: ../pages/moments.php");
 
         //criação da cookie para o "lembrar-me"
         if (isset($_SESSION['user'])) {
@@ -36,7 +36,7 @@ if (mysqli_stmt_fetch($result)) {
         header("Location: ../pages/profile.php");
     } else {
         // Acção de erro nos dados de login
-        header("Location: ../pages/login_register.php?erro=pass");
+        header("Location: ../pages/login_register.php?erro=1");
     }
 } else {
     // Acção de	erro nos dados de login
