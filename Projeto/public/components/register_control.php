@@ -35,17 +35,11 @@ if (!empty($_POST['apelido'])) {
     $erro[] = 3;
 }
 
-////Verifica se o campo username está preenchido.
-//if (!empty($_POST['username'])) {
-//    //Se estiver preenchido, verifica o número de caracteres.
-//    if ((strlen($_POST['username'])) > 20) {
-//        //Erro de excesso de caracteres.
-//        $erro[] = 6;
-//    }
-//} else {
-//    //Erro de campo vazio.
-//    $erro[] = 5;
-//}
+//Verifica se o campo gene está preenchido.
+if (empty($_POST['genero'])) {
+           $erro[] = 5;
+    }
+
 
 //Verifica se o campo email está preenchido.
 if (!empty($_POST['email'])) {
@@ -60,28 +54,28 @@ if (!empty($_POST['email'])) {
 }
 
 //Verifica se o campo passwords está preenchido.
-//if (!empty($_POST['password'])) {
-//    //Se estiver preenchido, verifica o número de caracteres.
-//    if ((strlen($_POST['password'])) < 8 || (strlen($_POST['password'])) > 12) {
-//        //Erro de falta ou excesso de caracteres.
-//        $erro[] = 10;
-//    }
-//
-//    $password = $_POST['password'] ;
-//
-//    if (!preg_match("#[0-9]+#", $password)) {
-//        $erro[] = 11;
-//    }
-//    if (!preg_match("#[A-Z]+#", $password)) {
-//        $erro[] = 12;
-//    }
-//    if (!preg_match("#[a-z]+#", $password)) {
-//        $erro[] = 13;
-//    }
-//}else {
-//    //Erro de campo vazio.
-//    $erro[] = 9;
-//}
+if (!empty($_POST['password'])) {
+    //Se estiver preenchido, verifica o número de caracteres.
+    if ((strlen($_POST['password'])) < 8 || (strlen($_POST['password'])) > 12) {
+        //Erro de falta ou excesso de caracteres.
+        $erro[] = 10;
+    }
+
+    $password = $_POST['password'] ;
+
+    if (!preg_match("#[0-9]+#", $password)) {
+        $erro[] = 11;
+    }
+    if (!preg_match("#[A-Z]+#", $password)) {
+        $erro[] = 12;
+    }
+    if (!preg_match("#[a-z]+#", $password)) {
+        $erro[] = 13;
+    }
+}else {
+    //Erro de campo vazio.
+    $erro[] = 9;
+}
 
 //Verifica se o campo confirmar password está preenchido.
 if (!empty($_POST['cpassword'])) {
@@ -99,14 +93,15 @@ else {
 if(count($erro)==0) {
     //Registo do utilizador na BD
 
-    $query = "INSERT INTO users (nome, apelido, email, password) VALUES (?,?,?,?)";
+    $query = "INSERT INTO users (nome, apelido, genero, email, password) VALUES (?,?,?,?,?)";
 
     $stmt = mysqli_prepare($link, $query);
 
-    mysqli_stmt_bind_param($stmt, 'ssss', $nome, $apelido, $email, $password);
+    mysqli_stmt_bind_param($stmt, 'sssss', $nome, $apelido, $genero, $email, $password);
 
     $nome = $_POST['nome'];
     $apelido = $_POST['apelido'];
+    $genero = $_POST['genero'];
     $email = $_POST['email'];
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -132,6 +127,7 @@ else{
     $_SESSION['nome'] = $_POST['nome'];
     $_SESSION['apelido'] = $_POST['apelido'];
     $_SESSION['email'] = $_POST['email'];
+    $_SESSION['genero'] = $_POST['genero'];
 
     if(!in_array("9", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("12", $erro) && !in_array("13", $erro) && !in_array("14", $erro) && !in_array("15", $erro)){
         $erro[] = 16;

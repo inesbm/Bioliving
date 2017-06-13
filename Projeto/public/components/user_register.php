@@ -10,22 +10,17 @@ if(isset($url['query'])){
     parse_str($url['query'], $query);
 }
 
-//for($n=0; $n<count($query); $n++){  // PROVISÓRIO
-//echo $query[$n]."<br>";
-
 // ERROS
 
-// Erros - variáveis dos campos
-
+// Variáveis para guardar as mensagens de erro
 $campo_nome = "";
 $campo_apelido = "";
 $campo_genero = "";
-//$campo_username = "";
 $campo_email = "";
 $campo_password = "";
 $campo_cpassword = "";
 
-// Verifica quais são os erros comunicados através do URL.
+// Atribuição das mensagens às variáveis das mensagens de erro, de acordo com os erros comunicados no URL.
 
 // CAMPO NOME
 if (in_array("1", $query)){
@@ -41,14 +36,10 @@ if (in_array("3", $query)){
 if (in_array("4", $query)){
     $campo_apelido = "O limite de caracteres para este campo é 50.";
 }
-// CAMPO USERNAME
+// CAMPO GÉNERO
 if (in_array("5", $query)){
-    $campo_username = "O campo está vazio. Por favor, preencha-o.";
-}
-if (in_array("6", $query)){
-    $campo_username = "O limite de caracteres para este campo é 20.";
-}
-// CAMPO EMAIL
+    $campo_genero = "Por favor, selecione o género.";
+}// CAMPO EMAIL
 if (in_array("7", $query)){
     $campo_email = "O campo email está vazio. Por favor, preencha-o.";
 }
@@ -79,9 +70,9 @@ if (in_array("15", $query)){
     $campo_cpassword = "Os valores introduzidos nos campos password e confirmar password não são iguais.";
 }
 if (in_array("16", $query)){
-    $password = "Por favor, volte a preencher o campo password.";
     $campo_cpassword = "Por favor, volte a preencher o campo confirmar password.";
 }
+
 
 //Registo inválido. Se o registo for inválido (informação que vem no URL), a variável $registo = "invalido".
 $registo = "";
@@ -90,23 +81,18 @@ if(isset($_GET['registo'])){
     $campo_cpassword = "Por favor, volte a preencher os campos password e confirmar password.";
 }
 
-//Lembrar dados introduzidos anteriormente.
-
+//Variáveis para guardar os valores preenchidos nos campos de formulário após uma submissão incorreta
 $nome = "";
 $apelido = "";
 $genero = "";
-//$username = "";
 $email = "";
-$password = "";
 $cpassword = "";
 
-if(isset($_SESSION['nome'])){
+if(isset($_SESSION['nome'])) {
     $nome = $_SESSION['nome'];
     $apelido = $_SESSION['apelido'];
-    //$username = $_SESSION['username'];
     $email = $_SESSION['email'];
 }
-
 ?>
 
 <!--FORMULÁRIO DE REGISTO-->
@@ -131,14 +117,44 @@ if(isset($_SESSION['nome'])){
             <span class="radio_label">Género:</span>
         </div>
         <div class="row radio_genero">
-            <p>
-                <input name="genero" type="radio" value="m" id="genero_masculino" />
-                <label for="genero_masculino">Masculino</label>
-            </p>
-            <p>
-                <input name="genero" type="radio" value="f" id="genero_feminino" />
-                <label for="genero_feminino">Feminino</label>
-            </p>
+            <?php
+            if(isset($_SESSION['genero'])) {
+                if ($_SESSION['genero'] == "m") {
+                    echo "<p>
+                            <input name=\"genero\" type=\"radio\" value=\"m\" id=\"genero_masculino\" checked />
+                            <label for=\"genero_masculino\">Masculino</label>
+                          </p>";
+                }
+                else {
+                    echo "<p>
+                        <input name=\"genero\" type=\"radio\" value=\"m\" id=\"genero_masculino\" />
+                        <label for=\"genero_masculino\">Masculino</label>
+                      </p>";
+                }
+                if ($_SESSION['genero'] == "f") {
+                    echo "<p>
+                            <input name=\"genero\" type=\"radio\" value=\"f\" id=\"genero_feminino\" checked/>
+                            <label for=\"genero_feminino\">Feminino</label>
+                          </p>";
+                }
+                else{
+                    echo "<p>
+                        <input name=\"genero\" type=\"radio\" value=\"m\" id=\"genero_feminino\" />
+                        <label for=\"genero_feminino\">Feminino</label>
+                      </p>";
+                }
+            }
+            else{
+                echo "<p>
+                        <input name=\"genero\" type=\"radio\" value=\"m\" id=\"genero_masculino\" />
+                        <label for=\"genero_masculino\">Masculino</label>
+                      </p>
+                      <p>
+                        <input name=\"genero\" type=\"radio\" value=\"m\" id=\"genero_feminino\" />
+                        <label for=\"genero_feminino\">Feminino</label>
+                      </p>";
+            }
+            ?>
             <span class="green-text"><?= $campo_genero ?></span>
         </div>
         <div class="row">
