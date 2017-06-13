@@ -15,7 +15,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/t-shirt_small.png">
+                <img src="../../images/imagem1.png">
             </div>
             <div class="card-content">
                 <span>Vestuário</span>
@@ -28,7 +28,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/t-shirt2_small.png">
+                <img src="../../images/imagem1.png">
             </div>
             <div class="card-content">
                 <span>Vestuário</span>
@@ -41,7 +41,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/carvalho.PNG">
+                <img src="../../images/imagem1.png">
             </div>
             <div class="card-content">
                 <span>Árvores</span>
@@ -54,7 +54,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/cedro.PNG">
+                <img src="../../images/imagem1.png">
             </div>
             <div class="card-content">
                 <span>Árvores</span>
@@ -67,7 +67,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/salgueiro.PNG">
+                <img src="../../images/imagem1.png">
             </div>
             <div class="card-content">
                 <span>Árvores</span>
@@ -80,7 +80,7 @@
         <!--Card for content-->
         <div class="card">
             <div class="card-image">
-                <img src="../../images/álamo.PNG">
+                <img src="../../images/imagem1.png">
             </div>
             <div class="card-content">
                 <span>Árvores</span>

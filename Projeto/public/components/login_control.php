@@ -25,7 +25,7 @@ if (mysqli_stmt_fetch($result)) {
         $_SESSION['apelido'] = $apelido;
         $_SESSION['genero'] = $genero;
         $_SESSION['role'] = $role;
-        header("Location: ../pages/profile.php");
+        header("Location: ../pages/moments.php");
     } else {
         // Acção de erro nos dados de login
         header("Location: ../pages/login_register.php?erro=1");

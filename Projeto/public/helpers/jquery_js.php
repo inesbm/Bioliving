@@ -29,9 +29,13 @@
         $('.modal').modal();
     });
 
-    $('#modal1').modal('open');
+    /*$('#modal1').modal('open');*/
 
     $('#modal1').modal('close');
+
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
 
 //Search Box Admin Area
 //    $('input.autocomplete').autocomplete({
@@ -45,5 +49,14 @@
 //        },
 //        minLength: 1 // The minimum length of the input for the autocomplete to start. Default: 1.
 //    });
+
 </script>
 
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- Materializecss compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+<!-- jQueryValidation Plugin (optional) -->
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+<!--Import Materialize-Stepper JavaScript -->
+<script src="materialize-stepper.min.js"></script>

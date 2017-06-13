@@ -4,16 +4,16 @@
         <div class="carousel-fixed-item center">
         </div>
         <div class="carousel-item  white-text "
-             style="background-image: url('../../images/OMWR900.jpg'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
         <div class="carousel-item  white-text "
-             style="background-image: url('../../images/17991767_2006444569575585_8390700167120406156_o.jpg'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
         <div class="carousel-item  white-text "
-             style="background-image: url('../../images/18582184_2025558300997545_3141550223896757295_n.jpg'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
         <div class="carousel-item  white-text "
-             style="background-image: url('../../images/OMWR9V0.jpg'); background-size: cover; background-position: center;">
+             style="background-image: url('../../images/imagem1.png'); background-size: cover; background-position: center;">
         </div>
     </div>
 
@@ -25,21 +25,20 @@
                 </div>
                 <div class="card-content">
                     <span class="card-title">Momentos</span>
-                    <p>Momentos é um projeto desenvolvido no âmbito das UCs de LabMM4 e Ergonomia dos Sistemas em parceria
-                        com a Associação BioLiving que visa sensibilizar o público para a plantação de árvores associando-as às
-                        suas memórias mais queridas. Tenciona assinalar os momentos especiais, como o nascimento de um filho,
-                        o dia do casamento, o início de uma nova etapa, a fundação de uma empresa, entre outros, através do
-                        apadrinhamento de uma árvore, criando um marco ambiental. <br><br>É não só a plantação, mas também o acompanhamento
-                        do crescimento da árvore que irá criar uma ligação singular e emocional com natureza. Desta forma, a cada
-                        árvore plantada segundo este sistema está associada uma história única que queremos registar para que possa
-                        ser partilhada com quem a visita. <br><br>Queremos construir florestas de memórias.</p>
-<!--                   <span class="card-title margin-top-10">Título</span>-->
-<!--                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient-->
-<!--                        because I require little markup to use effectively.</p>-->
-<!--                    <div class="divider margin-top-10"></div>-->
-<!--                    <span class="card-title margin-top-10">Título</span>-->
-<!--                    <p>I am a very simple card. I am good at containing small bits of information. I am convenient-->
-<!--                        because I require little markup to use effectively.</p>-->
+                    <p> Há dias que nos marcam de forma especial e merecem ser recordados.
+                        O nascimento de um filho, o dia do casamento, a fundação de uma
+                        empresa e outros eventos de vida são alguns dos momentos que podem ser assinalados de forma
+                        única através do apadrinhamento de uma árvore.
+                        <br/><br/>É não só a plantação, mas também o
+                        acompanhamento
+                        do crescimento da árvore que irá criar uma ligação singular e emocional com natureza. A cada
+                        árvore plantada está associada uma história que será partilhada com quem a visitar.
+                        <br/><br/>
+                        Vamos juntos construir florestas de memórias.
+
+                    </p>
+                    <a class="waves-effect waves-light btn" href="moments_register.php">Registar momento</a>
+                    <a class="waves-effect waves-light btn" href="moments.php">Ver momentos</a>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ session_start();
 <?php include_once "../components/top_nav_moments_register.php" ?>
 
 <!--Content (colocar aqui o componente)-->
-<?php include_once "../components/moments_register.php" ?>
+<?php include_once "../components/moments_register_2.php" ?>
 
 <!--Footer-->
 <?php include_once "../components/footer.php" ?>
