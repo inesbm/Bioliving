@@ -111,8 +111,15 @@ if(count($erro)==0) {
 
         session_unset();
 
-        header('Location: ../pages/info_bioliving.php');
-    } else {
+        $_SESSION['user'] = $email;
+        $_SESSION['nome'] = $nome;
+        $_SESSION['apelido'] = $apelido;
+        $_SESSION['genero'] = $genero;
+        $_SESSION['role'] = $role;
+
+        header('Location: ../pages/moments.php');
+    }
+    else {
         mysqli_stmt_close($stmt);
         // Registo inválido.
 

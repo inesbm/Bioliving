@@ -33,7 +33,7 @@ if (mysqli_stmt_fetch($result)) {
                 setcookie($cookie_name, $email,((time() + 3600 * 24 * 7)));     //duração da cookie: 7 dias
             }
         }
-        header("Location: ../pages/profile.php");
+        header("Location: ../pages/moments.php");
     } else {
         // Acção de erro nos dados de login
         header("Location: ../pages/login_register.php?erro=1");
