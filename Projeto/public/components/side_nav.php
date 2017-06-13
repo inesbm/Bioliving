@@ -3,7 +3,7 @@
         <?php
             if (isset($_SESSION['user'])) {
                 $email = $_SESSION['user'];
-                $nome = $_SESSION['name'];
+                $nome = $_SESSION['nome'];
                 $apelido = $_SESSION['apelido'];
                 $genero = $_SESSION['genero'];
                 if ($genero == "m") {

@@ -21,7 +21,7 @@ if (mysqli_stmt_fetch($result)) {
         //	Guardar	dados	do	utilizador	em	sessão	e	acção	de	sucesso
 //        if (!isset($_SESSION['user'])) {
         $_SESSION['user'] = $email;
-        $_SESSION['name'] = $nome;
+        $_SESSION['nome'] = $nome;
         $_SESSION['apelido'] = $apelido;
         $_SESSION['genero'] = $genero;
         $_SESSION['role'] = $role;

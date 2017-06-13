@@ -119,6 +119,7 @@ if(count($erro)==0) {
         $_SESSION['nome'] = $_POST['nome'];
         $_SESSION['apelido'] = $_POST['apelido'];
         $_SESSION['email'] = $_POST['email'];
+        $_SESSION['registo']='invalido';
 
         header('Location: ../pages/login_register.php?registo=invalido');
     }
@@ -128,6 +129,7 @@ else{
     $_SESSION['apelido'] = $_POST['apelido'];
     $_SESSION['email'] = $_POST['email'];
     $_SESSION['genero'] = $_POST['genero'];
+    $_SESSION['registo']='invalido';
 
     if(!in_array("9", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("10", $erro) && !in_array("11", $erro) && !in_array("12", $erro) && !in_array("13", $erro) && !in_array("14", $erro) && !in_array("15", $erro)){
         $erro[] = 16;

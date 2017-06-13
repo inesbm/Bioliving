@@ -21,7 +21,7 @@ session_start();
 <?php include_once "../components/side_nav.php" ?>
 
 <!--Top Navigation-->
-<?php include_once "../components/top_nav_login.php" ?>
+<?php include_once "../components/top_nav_register_login.php" ?>
 
 <!--Content (colocar aqui o componente)-->
 <div class="row">

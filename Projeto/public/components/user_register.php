@@ -88,7 +88,7 @@ $genero = "";
 $email = "";
 $cpassword = "";
 
-if(isset($_SESSION['nome'])) {
+if(isset($_SESSION['registo'])) {
     $nome = $_SESSION['nome'];
     $apelido = $_SESSION['apelido'];
     $email = $_SESSION['email'];
@@ -150,7 +150,7 @@ if(isset($_SESSION['nome'])) {
                         <label for=\"genero_masculino\">Masculino</label>
                       </p>
                       <p>
-                        <input name=\"genero\" type=\"radio\" value=\"m\" id=\"genero_feminino\" />
+                        <input name=\"genero\" type=\"radio\" value=\"f\" id=\"genero_feminino\" />
                         <label for=\"genero_feminino\">Feminino</label>
                       </p>";
             }
