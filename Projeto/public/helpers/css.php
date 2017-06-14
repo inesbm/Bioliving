@@ -6,4 +6,4 @@
 <!--Import Google Icon Font-->
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--Import Materialize-Stepper CSS -->
-<link rel="stylesheet" href="materialize-stepper.min.css">
+<!--<link rel="stylesheet" href="materialize-stepper.min.css">-->
