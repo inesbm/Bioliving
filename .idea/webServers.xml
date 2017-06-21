@@ -5,6 +5,13 @@
       <webServer id="27af5815-c884-4dbc-9a44-d15605946b8e" name="local" url="http://localhost/Bioliving">
         <fileTransfer mountedRoot="C:\wamp64\www\Bioliving" accessType="MOUNT" />
       </webServer>
+      <webServer id="fe2a3a53-bcf0-4ff3-b2c3-62e9b6cf6606" name="labmm4" url="http://labmm.clients.ua.pt/deca_16l4/deca_16L4_03">
+        <fileTransfer host="labmm.clients.ua.pt" port="21" rootFolder="/deca_16L4_03" password="dfc5dfe2dfecdfd3dfc5dfe7" username="deca_16L4_03">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

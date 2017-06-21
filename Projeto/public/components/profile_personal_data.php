@@ -105,7 +105,7 @@
     <div id=\"profile_data_others\" class=\"col s12\">
         <div class=\"row\">
             <div class=\"input-field col s12\">
-                <input id=\"calendar\" type=\"date\" class=\"datepicker\" name=\"birthdate\" value=\"$data_nascimento_BD\">
+                <input id=\"calendar\" type=\"text\" class=\"datepicker\" name=\"data_nascimento\" value=\"$data_nascimento_BD\">
                 <label for=\"calendar\">Data de Nascimento</label>
             </div>
         </div>
@@ -118,27 +118,27 @@
     <div id=\"user_address\" class=\"col s12\">
         <div class=\"row\">
             <div class=\"input-field col s12\">
-                <input type=\"text\" class=\"validate\" id=\"rua\" value=\"$rua_BD\">
+                <input type=\"text\" class=\"validate\" id=\"rua\" name='rua' value=\"$rua_BD\">
                 <label for=\"rua\">Rua</label>
             </div>
         </div>
         <div class=\"row\">
             <div class=\"input-field col s6\">
-                <input type=\"text\" class=\"validate\" id=\"n_porta\" value=\"$numero_porta_BD\">
+                <input type=\"text\" class=\"validate\" id=\"n_porta\" name='numero_porta' value=\"$numero_porta_BD\">
                 <label for=\"n_porta\">N.º Porta</label>
             </div>
             <div class=\"input-field col s6\">
-                <input type=\"text\" class=\"validate\" id=\"andar\" value=\"$andar_BD\">
+                <input type=\"text\" class=\"validate\" id=\"andar\" name='andar' value=\"$andar_BD\">
                 <label for=\"andar\">Andar</label>
             </div>
         </div>
         <div class=\"row\">
             <div class=\"input-field col s6\">
-                <input type=\"text\" class=\"validate\" id=\"cod_postal\" value=\"$codigo_postal_BD\">
+                <input type=\"text\" class=\"validate\" id=\"cod_postal\" name='codigo_postal' value=\"$codigo_postal_BD\">
                 <label for=\"cod_postal\">Código Postal</label>
             </div>
             <div class=\"input-field col s6\">
-                <input type=\"text\" class=\"validate\" id=\"cidade\" value=\"$cidade_BD\">
+                <input type=\"text\" class=\"validate\" id=\"cidade\" name='cidade' value=\"$cidade_BD\">
                 <label for=\"cidade\">Cidade</label>
             </div>
         </div>
