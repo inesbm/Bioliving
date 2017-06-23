@@ -28,7 +28,7 @@ session_start();
 
 <!--Content (Mapa)-->
 
-<?php include_once "../components/map_search.php" ?>
+<?php include_once "../components/map_register.php" ?>
 
 <!--Footer-->
 <?php include_once "../components/footer.php" ?>
