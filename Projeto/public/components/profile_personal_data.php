@@ -18,12 +18,14 @@
                 ";
         }
         ?>
-        <div id="personal_data" class="input-field-photo">
-            <div class="btn-floating btn waves-effect waves-light green file-field">
-                <i class="material-icons">mode_edit</i>
-                <input type="file">
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <div id="personal_data" class="input-field-photo">
+                <div class="btn-floating btn waves-effect waves-light green file-field">
+                    <i class="material-icons">mode_edit</i>
+                    <input type="file" name="upload_profile_image" id="upload_profile_image" onchange="this.form.submit()">
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 
@@ -40,12 +42,12 @@
                 require_once('../connections/connection.php');
 
                 // Definir a query
-                $query = "SELECT nome, apelido, genero, email, data_nascimento, rua, numero_porta, andar, codigo_postal, cidade FROM users WHERE email=?";
+                $query = "SELECT nome, apelido, genero, email, data_nascimento, rua, numero_porta, andar, codigo_postal, cidade, contribuinte FROM users WHERE email=?";
                 $result = mysqli_prepare($link, $query);
                 // Extrair dados da BD 
                 mysqli_stmt_bind_param($result, 's', $email);
                 mysqli_stmt_execute($result);
-                mysqli_stmt_bind_result($result, $nome, $apelido, $genero, $email, $data_nascimento, $rua, $numero_porta, $andar, $codigo_postal, $cidade);
+                mysqli_stmt_bind_result($result, $nome, $apelido, $genero, $email, $data_nascimento, $rua, $numero_porta, $andar, $codigo_postal, $cidade, $nif);
 
                 if (mysqli_stmt_fetch($result)) {
                     //Variáveis
@@ -54,11 +56,16 @@
                     $genero_BD = $genero;
                     $email_BD = $email;
                     $data_nascimento_BD = $data_nascimento;
+                    $nif_BD = $nif;
                     $rua_BD = $rua;
                     $numero_porta_BD = $numero_porta;
                     $andar_BD = $andar;
                     $codigo_postal_BD = $codigo_postal;
                     $cidade_BD = $cidade;
+
+//                    $_SESSION['user_id'] =
+
+                    mysqli_stmt_close($result);
 
                     echo "
             <div class=\"input-field col s6\">
@@ -109,6 +116,17 @@
                 <label for=\"calendar\">Data de Nascimento</label>
             </div>
         </div>
+    </div>
+
+    <div class=\"divider col s12\">
+        <div class=\"row\"></div>
+    </div>
+
+    <div class=\"row\">
+            <div class=\"input-field col s12\">
+                <input id=\"nif\" type=\"text\" class=\"validate\" name=\"nif\" value=\"$nif_BD\">
+                <label for=\"nif\">NIF</label>
+            </div>
     </div>
 
     <div class=\"divider col s12\">
