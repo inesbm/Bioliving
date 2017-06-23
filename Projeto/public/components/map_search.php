@@ -1,37 +1,6 @@
-<form id="formulario" method="POST" action="moments_search_3.php">
-    <input id="latitude" name="latitude" type="text">
-    <input id="longitude" type="text">
-    <input type="submit" name="longitude" value="Submit">
-</form>
-
-<button onclick="guardar_pontos();">Guardar</button>
-<br>
-<button onclick="deleteMarkers(); apagar_formulario();">Limpar</button>
-
 <div id="map"></div>
 
 <script>
-
-    function deleteMarkers() {
-        clearMarkers();
-        markers = [];
-    }
-
-    var pontos_mapa = [];
-    var latitude_momento;
-    var longitude_momento;
-    var listener;
-
-    function formulario(){
-        document.getElementById("latitude").value = latitude_momento;
-        document.getElementById("longitude").value = longitude_momento;
-        listener.remove();
-    }
-
-    function apagar_formulario(){
-        document.getElementById("latitude").value = "";
-        document.getElementById("longitude").value = "";
-    }
 
     // Note: This example requires that you consent to location sharing when
     // prompted by your browser. If you see the error "The Geolocation service
@@ -42,20 +11,6 @@
         var map = new google.maps.Map(document.getElementById('map'), {
             center: {lat: 30.500, lng: -15.500},
             zoom: 6
-        });
-
-        // Adicionar novos pontos ao mapa, através de cliques no mapa
-        listener = google.maps.event.addDomListener(map, 'click', function addMyMarker(e) { //function that will add markers on button click
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(e.latLng.lat(), e.latLng.lng()),
-                map: map,
-                draggable: false,
-                animation: google.maps.Animation.DROP,
-                icon: "http://maps.google.com/mapfiles/ms/micons/green.png"
-            });
-            latitude_momento = e.latLng.lat();
-            longitude_momento = e.latLng.lng();
-            formulario();
         });
 
         var infoWindow = new google.maps.InfoWindow({map: map});
