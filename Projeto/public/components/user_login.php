@@ -35,7 +35,7 @@
                 </div>
             </div>
             <p>
-                <a class="green-text" href='#!'><b>Esqueceu-se da password?</b></a>
+                <a class="green-text" href='password_recover.php'><b>Esqueceu-se da password?</b></a>
             </p>
         </form>
     </div>
