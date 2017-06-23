@@ -1,6 +1,7 @@
 <?php
 //	Define	as variáveis
 
+
 //$hostname = "localhost";
 $hostname = "labmm.clients.ua.pt";
 
