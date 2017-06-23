@@ -5,9 +5,12 @@ require_once "../connections/connection.php";
 
 //$target_dir = "uploads/";
 //$target_dir = "http://labmm.clients.ua.pt/deca_16L4/deca_16L4_03/IIS_tmp/";
-$target_dir = "../../../IIS_tmp/";
+$target_dir = "../../../../IIS_tmp/img_perfil/";
 
-$target_file = $target_dir . basename($_FILES["upload_profile_image"]["name"]);
+if (!file_exists($target_dir)) {
+    mkdir($target_dir, 0777, true);
+}
+$target_file = $target_dir . $_SESSION['user_id']. ".jpg";
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
@@ -23,11 +26,11 @@ if(isset($_POST["submit"])) {
     }
 }
 
-// Verifica se o ficheiro já existe
-if (file_exists($target_file)) {
-    echo "O ficheiro já existe.";
-    $uploadOk = 0;
-}
+//// Verifica se o ficheiro já existe
+//if (file_exists($target_file)) {
+//    echo "O ficheiro já existe.";
+//    $uploadOk = 0;
+//}
 
 // Verifica o tamanho do ficheiro
 //para ficheiros de 140px por 140px cada terá 58800bytes
@@ -48,6 +51,7 @@ if ($uploadOk == 0) {
 
 // Se estiver ok, tenta fazer o upload do ficheiro
 } else {
+
     if (move_uploaded_file($_FILES["upload_profile_image"]["tmp_name"], $target_file)) {
         echo "O ficheiro ". basename( $_FILES["upload_profile_image"]["name"]). " foi carregado com sucesso.";
     } else {
