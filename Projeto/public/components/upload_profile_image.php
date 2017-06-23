@@ -40,9 +40,8 @@ if ($_FILES["upload_profile_image"]["size"] > 58800) {
 }
 
 // Verifica os tipos de ficheiro permitidos
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-    && $imageFileType != "gif" ) {
-    echo "Apenas são permitidos ficheiros dos formatos JPG, JPEG, PNG e GIF.";
+if($imageFileType != "jpg" && $imageFileType != "jpeg") {
+    echo "Apenas são permitidos ficheiros dos formatos JPG e JPEG.";
     $uploadOk = 0;
 }
 // Verifica se o $uploadOk está no estado 0 de um erro
@@ -54,6 +53,9 @@ if ($uploadOk == 0) {
 
     if (move_uploaded_file($_FILES["upload_profile_image"]["tmp_name"], $target_file)) {
         echo "O ficheiro ". basename( $_FILES["upload_profile_image"]["name"]). " foi carregado com sucesso.";
+
+        header('Location: ../pages/profile.php');
+
     } else {
         echo "Houve um erro ao carregar a imagem.";
     }

@@ -1,26 +1,38 @@
 <ul id="slide-out" class="side-nav">
     <li>
         <?php
-            if (isset($_SESSION['user'])) {
-                $email = $_SESSION['user'];
-                $nome = $_SESSION['nome'];
-                $apelido = $_SESSION['apelido'];
-                $genero = $_SESSION['genero'];
+        if (isset($_SESSION['user'])) {
+            $genero = $_SESSION['genero'];
+            $email = $_SESSION['user'];
+            $user_id = $_SESSION['user_id'];
+            $nome = $_SESSION['nome'];
+            $apelido = $_SESSION['apelido'];
+            $result = "";
+
+            //verificar se imagem existe
+            $target_dir = "../../../../IIS_tmp/img_perfil/";
+            $avatar_path = $target_dir.$user_id.".jpg";
+            if (file_exists($avatar_path)) {
+                //aplicar imagem perfil;
+            }
+            else{
+                //aplicar imagem default
                 if ($genero == "m") {
-                    $avatar = "avatar_man.png";
+                    $avatar_path = "../../images/avatar_man.png";
                 } else {
-                    $avatar = "avatar_woman.png";
+                    $avatar_path = "../../images/avatar_woman.png";
                 }
-                echo "
-                    <div class=\"userView\">
-                        <div class=\"background\">
-                            <img src=\"../../images/back.png\" style=\"width: 100%;\">
-                        </div>
-//                        <!--- distinguir avatar consoante seja homem ou mulher --->
-                        <a href=\"profile.php\"><img class=\"circle\" src=\"../../images/$avatar\"></a>
-                        <a href=\"#\"><span class=\"white-text name\">$nome $apelido</span></a><br>
+            }
+
+            echo "
+                <div class=\"userView\">
+                    <div class=\"background\">
+                        <img src=\"../../images/back.png\" style=\"width: 100%;\">
                     </div>
-                ";
+                    <a href=\"profile.php\"><img class=\"circle\" src=\"$avatar_path\"></a>
+                    <a href=\"#\"><span class=\"white-text name\">$nome $apelido</span></a><br>
+                </div>
+            ";
             }
         ?>
     </li>
