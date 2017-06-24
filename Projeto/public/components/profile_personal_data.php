@@ -41,6 +41,25 @@
     </div>
 </div>
 
+<p class="green-text" id="msg_erro_upload_img_perfil">
+    <?php
+    if (isset($_GET['erro'])) {
+        if ($_GET['erro'] == 1) {
+            echo "Houve um erro ao carregar a imagem.";
+        }
+        if ($_GET['erro'] == 2) {
+            echo "O ficheiro não foi carregado porque é demasiado grande.";
+        }
+        if ($_GET['erro'] == 3) {
+            echo "Apenas são permitidos ficheiros dos formatos JPG e JPEG.";
+        }
+        if ($_GET['erro'] == 4) {
+            echo "O ficheiro não é uma imagem.";
+        }
+    }
+    ?>
+</p>
+
 <div class="divider col s12">
     <div class="row"></div>
 </div>
