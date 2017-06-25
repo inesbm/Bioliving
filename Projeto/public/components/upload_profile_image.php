@@ -38,7 +38,7 @@ if ($_FILES["upload_profile_image"]["size"] > 58800) {
 }
 
 // Verifica os tipos de ficheiro permitidos
-if($imageFileType != "jpg" && $imageFileType != "jpeg") {
+if($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png" && $imageFileType != "gif") {
     $uploadOk = 0;
     $erro = 3;
 }
@@ -54,7 +54,7 @@ if ($uploadOk == 0) {
             header('Location: ../pages/profile.php?erro=2');
             break;
         case 3:
-            //erro 3 = "Apenas são permitidos ficheiros dos formatos JPG e JPEG."
+            //erro 3 = "Apenas são permitidos ficheiros dos formatos JPG, JPEG, PNG e GIF."
             header('Location: ../pages/profile.php?erro=3');
             break;
         case 4:
