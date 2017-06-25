@@ -1,3 +1,49 @@
+<style>
+
+    .controls {
+        margin-top: 55px !important;
+        border: 1px solid transparent !important;
+        border-radius: 2px 0 0 2px !important;
+        box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        height: 32px !important !important;
+        outline: none !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    #pac-input {
+        background-color: #fff !important;
+        font-family: Roboto !important;
+        font-size: 15px !important;
+        font-weight: 300 !important;
+        margin-left: 10px !important;
+        padding: 0 11px 0 13px !important;
+        text-overflow: ellipsis !important;
+        width: 80% !important;
+        left: 0px !important;
+    }
+
+    #pac-input:focus {
+        border-color: #4d90fe;
+    }
+
+    .pac-container {
+        font-family: Roboto;
+    }
+
+    #type-selector {
+        color: #fff;
+        background-color: #4d90fe;
+        padding: 5px 11px 0px 11px;
+    }
+
+    #type-selector label {
+        font-family: Roboto;
+        font-size: 13px;
+        font-weight: 300;
+    }
+</style>
+
 <?php
 session_start();
 ?>
@@ -28,7 +74,23 @@ session_start();
 
 <!--Content (Mapa)-->
 
-<?php include_once "../components/map_search.php" ?>
+<div id="map"><?php include_once "../components/map_search.php" ?></div>
+<input id="pac-input" class="controls" type="text"
+       placeholder="Inserir localização">
+<div style="display: none" id="type-selector" class="controls">
+    <input type="radio" name="type" id="changetype-all" checked="checked">
+    <label for="changetype-all">All</label>
+
+    <input type="radio" name="type" id="changetype-establishment">
+    <label for="changetype-establishment">Establishments</label>
+
+    <input type="radio" name="type" id="changetype-address">
+    <label for="changetype-address">Addresses</label>
+
+    <input type="radio" name="type" id="changetype-geocode">
+    <label for="changetype-geocode">Geocodes</label>
+</div>
+<div id="teste2"><?php include_once "../components/search_id.php" ?></div>
 
 <!--Footer-->
 <?php include_once "../components/footer.php" ?>

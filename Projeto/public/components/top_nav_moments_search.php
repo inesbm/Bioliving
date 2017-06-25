@@ -14,35 +14,11 @@
         -->
     </div>
 
-    <!--Tabs/ SubMenus-->
-<!--    <div class="nav-content">-->
-<!--        <ul class="tabs tabs-transparent">-->
-<!--            <li class="tab"><a href="#test1">Localização</a></li>-->
-<!--            <li class="tab"><a href="#test2">Recentes</a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-</nav>
-
-<nav>
-    <div class="nav-wrapper white">
-        <form>
-            <div class="input-field">
-                <input class="grey-text text-darken-3" id="search" type="search" required value="Inserir o id ou o local" onfocus="apagarvalue()" onblur="reporvalue()">
-                <label class="label-icon" for="search"><i class="material-icons grey-text text-darken-3" style="opacity: 2">search</i></label>
-            </div>
-        </form>
+<!--    Tabs/ SubMenus-->
+    <div class="nav-content">
+        <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="#map">Localização</a></li>
+            <li class="tab"><a href="#teste2">ID</a></li>
+        </ul>
     </div>
 </nav>
-
-<script>
-    function apagarvalue() {
-
-        document.getElementById('search').value = "";
-
-    }
-    function reporvalue() {
-
-        document.getElementById('search').value = "Inserir o id ou o local";
-
-    }
-</script>

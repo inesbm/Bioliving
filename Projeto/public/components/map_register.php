@@ -1,19 +1,12 @@
-<form id="formulario" method="POST" action="moments_search_3.php">
-    <input id="latitude" name="latitude" type="text">
-    <input id="longitude" type="text">
-    <input type="submit" name="longitude" value="Guardar">
+<form id="formulario" method="POST" action="../components/map_register_control.php">
+    <input id="latitude" name="latitude" type="hidden">
+    <input id="longitude" name="longitude" type="hidden">
+    <input style="width: 46.5%; margin-left: 2%" class="waves-effect waves-dark btn blue offset-s2" type="submit" value="Guardar"><button style="width: 46.5%; margin-right: 2%" type="button" class="waves-effect btn blue right" onclick="initMap(); apagar_formulario();">Limpar</button>
 </form>
-
-<button onclick="initMap(); apagar_formulario();">Limpar</button>
 
 <div id="map"></div>
 
 <script>
-
-    function deleteMarkers() {
-        clearMarkers();
-        markers = [];
-    }
 
     var pontos_mapa = [];
     var latitude_momento;
