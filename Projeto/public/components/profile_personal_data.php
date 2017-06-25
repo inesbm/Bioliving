@@ -19,6 +19,7 @@ $campo_atual_password = "";
 $campo_new_password = "";
 $campo_c_password = "";
 $campo_nif = "";
+$campo_cod_postal = "";
 
 // Atribuição das mensagens às variáveis das mensagens de erro, de acordo com os erros comunicados no URL.
 
@@ -36,10 +37,6 @@ if (in_array("3", $query)){
 if (in_array("4", $query)){
     $campo_apelido = "O limite de caracteres para este campo é 50.";
 }
-//// CAMPO GÉNERO
-//if (in_array("5", $query)){
-//    $campo_genero = "Por favor, selecione o género.";
-//}
 // CAMPO EMAIL
 if (in_array("7", $query)){
     $campo_email = "O campo email está vazio. Por favor, preenche-o.";
@@ -76,9 +73,22 @@ if (in_array("16", $query)){
 if (in_array("18", $query)){
     $campo_atual_password = "Para alterar a password, o campo atual password não pode estar vazio. Por favor, preenche-o.";
 }
+if (in_array("20", $query)){
+    $campo_atual_password = "O valor inserido no campo atual password não corresponde à tua passoword.";
+}
+if (in_array("21", $query)){
+    $campo_atual_password = "Ocorreu uma falha na verificação da atual password. Por favor tenta de novo";
+}
 // CAMPO NIF
 if (in_array("17", $query)) {
-    $campo_nif = "O NIF deve ter entre 9 algarismos.";
+    $campo_nif = "O NIF deve ter 9 algarismos.";
+}
+if (in_array("22", $query)) {
+    $campo_nif = "O NIF deve ter 9 algarismos.";
+}
+// CAMPO CÓDIGO POSTAL
+if (in_array("19", $query)) {
+    $campo_cod_postal = "O código postal deve ser composto por algarismos, no formato xxxx-xxx.";
 }
 
 ?>
@@ -179,8 +189,6 @@ if (in_array("17", $query)) {
                     $codigo_postal_BD = $codigo_postal;
                     $cidade_BD = $cidade;
 
-//                    $_SESSION['user_id'] =
-
                     mysqli_stmt_close($result);
 
                     echo "
@@ -275,6 +283,7 @@ if (in_array("17", $query)) {
             <div class=\"input-field col s6\">
                 <input type=\"text\" class=\"validate\" id=\"cod_postal\" name='codigo_postal' value=\"$codigo_postal_BD\">
                 <label for=\"cod_postal\">Código Postal</label>
+                <span class=\"green-text\">$campo_cod_postal</span>
             </div>
             <div class=\"input-field col s6\">
                 <input type=\"text\" class=\"validate\" id=\"cidade\" name='cidade' value=\"$cidade_BD\">

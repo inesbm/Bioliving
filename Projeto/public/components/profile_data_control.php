@@ -14,7 +14,6 @@ require_once '../components/form_validate.php';
 if(count($GLOBALS['erro'])==0) {
 
 $user_id = $_SESSION['user_id'];
-//$user = $_SESSION['user'];
 
     //Alteração dos dados do utilizador na BD
     $query = "UPDATE users SET nome=?,apelido=?,email=?,data_nascimento=?,rua=?,numero_porta=?,andar=?,
@@ -76,7 +75,7 @@ $user_id = $_SESSION['user_id'];
         $_SESSION['registo'] = 'valido';
 
 
-//    header('Location: ../pages/moments.php?');
+    header('Location: ../pages/moments.php?');
     } else {
         mysqli_stmt_close($stmt);
         // Registo inválido.
@@ -96,6 +95,3 @@ else{
 
     header('Location: ../pages/profile.php?'.$erro_query_string);
 }
-
-//printf("Error #%d: %s.\n", mysqli_stmt_errno($stmt), mysqli_stmt_error($stmt));
-//mysqli_stmt_execute($stmt);
