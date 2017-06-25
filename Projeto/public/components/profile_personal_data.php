@@ -8,103 +8,78 @@ if (isset($url['query'])) {
     parse_str($url['query'], $query);
 }
 
-//Conversão do URL numa lista.
-$query = [];
+// ERROS
 
-$url = parse_url($_SERVER['REQUEST_URI']);
-
-if (isset($url['query'])) {
-    parse_str($url['query'], $query);
-}
-
-//// ERROS
-//
-//// Variáveis para guardar as mensagens de erro
-//$campo_nome = "";
-//$campo_apelido = "";
+// Variáveis para guardar as mensagens de erro
+$campo_nome = "";
+$campo_apelido = "";
 //$campo_genero = "";
-//$campo_email = "";
-//$campo_password = "";
-//$campo_cpassword = "";
+$campo_email = "";
+$campo_atual_password = "";
+$campo_new_password = "";
+$campo_c_password = "";
+$campo_nif = "";
 
-//// Atribuição das mensagens às variáveis das mensagens de erro, de acordo com os erros comunicados no URL.
-//
-//// CAMPO NOME
-//if (in_array("1", $query)){
-//    $campo_nome = "O campo está vazio. Por favor, preencha-o.";
-//}
-//if (in_array("2", $query)){
-//    $campo_nome = "O limite de caracteres para este campo é 50).";
-//}
-//// CAMPO APELIDO
-//if (in_array("3", $query)){
-//    $campo_apelido = "O campo está vazio. Por favor, preencha-o.";
-//}
-//if (in_array("4", $query)){
-//    $campo_apelido = "O limite de caracteres para este campo é 50.";
-//}
+// Atribuição das mensagens às variáveis das mensagens de erro, de acordo com os erros comunicados no URL.
+
+// CAMPO NOME
+if (in_array("1", $query)){
+    $campo_nome = "O campo está vazio. Por favor, preenche-o.";
+}
+if (in_array("2", $query)){
+    $campo_nome = "O limite de caracteres para este campo é 50).";
+}
+// CAMPO APELIDO
+if (in_array("3", $query)){
+    $campo_apelido = "O campo está vazio. Por favor, preenche-o.";
+}
+if (in_array("4", $query)){
+    $campo_apelido = "O limite de caracteres para este campo é 50.";
+}
 //// CAMPO GÉNERO
 //if (in_array("5", $query)){
 //    $campo_genero = "Por favor, selecione o género.";
-//}// CAMPO EMAIL
-//if (in_array("7", $query)){
-//    $campo_email = "O campo email está vazio. Por favor, preencha-o.";
 //}
-//if (in_array("8", $query)){
-//    $campo_email = "O limite de caracteres deste campo é 100.";
-//}
-//// CAMPO PASSWORD
-//if (in_array("9", $query)){
-//    $campo_password = "O campo password está vazio. Por favor, preencha-o.";
-//}
-//if (in_array("10", $query)){
-//    $campo_password = "A password deve ter entre 8 e 12 caracteres.";
-//}
-//if (in_array("11", $query)){
-//    $campo_password = "A password deve conter algarismos e letras maiúsculas e minúsculas.";
-//}
-//if (in_array("12", $query)){
-//    $campo_password = "A password deve conter algarismos e letras maiúsculas e minúsculas.";
-//}
-//if (in_array("13", $query)){
-//    $campo_password = "A password deve conter algarismos e letras maiúsculas e minúsculas.";
-//}
-//// CAMPO CONFIRMAR PASSWORD
-//if (in_array("14", $query)){
-//    $campo_cpassword = "O campo confirmar password está vazio. Por favor, preencha-o.";
-//}
-//if (in_array("15", $query)){
-//    $campo_cpassword = "Os valores introduzidos nos campos password e confirmar password não são iguais.";
-//}
-//if (in_array("16", $query)){
-//    $campo_cpassword = "Por favor, volte a preencher o campo confirmar password.";
-//}
-//// CAMPO NIF
-//if (in_array("17", $query)) {
-//    $campo_nif = "O NIF deve ter entre 9 algarismos.";
-//}
-//
-////Registo inválido. Se o registo for inválido (informação que vem no URL), a variável $registo = "invalido".
-//$registo = "";
-//if (isset($_GET['registo'])) {
-//    $registo = "Registo inválido. O email escolhido já foi utilizado anteriormente."; // Em princípio, esse é o problema. (Mas esta solução deve ser alterada.)
-//    $campo_cpassword = "Por favor, volta a preencher os campos password e confirmar password.";
-//}
-//
-////Variáveis para guardar os valores preenchidos nos campos de formulário após uma submissão incorreta
-//$nome = "";
-//$apelido = "";
-//$genero = "";
-//$email = "";
-//$cpassword = "";
-//
-////var_dump($_SESSION);
-////
-////if (isset($_SESSION['registo'])) {
-////    $nome = $_SESSION['nome'];
-////    $apelido = $_SESSION['apelido'];
-////    $email = $_SESSION['email'];
-////}
+// CAMPO EMAIL
+if (in_array("7", $query)){
+    $campo_email = "O campo email está vazio. Por favor, preenche-o.";
+}
+if (in_array("8", $query)){
+    $campo_email = "O limite de caracteres deste campo é 100.";
+}
+// CAMPO PASSWORD
+if (in_array("9", $query)){
+    $campo_new_password = "O campo nova password está vazio. Por favor, preenche-o.";
+}
+if (in_array("10", $query)){
+    $campo_new_password = "A nova password deve ter entre 8 e 12 caracteres.";
+}
+if (in_array("11", $query)){
+    $campo_new_password = "A nova password deve conter algarismos e letras maiúsculas e minúsculas.";
+}
+if (in_array("12", $query)){
+    $campo_new_password = "A nova password deve conter algarismos e letras maiúsculas e minúsculas.";
+}
+if (in_array("13", $query)){
+    $campo_new_password = "A nova password deve conter algarismos e letras maiúsculas e minúsculas.";
+}
+// CAMPO CONFIRMAR PASSWORD
+if (in_array("14", $query)){
+    $campo_c_password = "O campo confirmar password está vazio. Por favor, preenche-o.";
+}
+if (in_array("15", $query)){
+    $campo_c_password = "Os valores introduzidos nos campos nova password e confirmar password não são iguais.";
+}
+if (in_array("16", $query)){
+    $campo_c_password = "Por favor, volta a preencher o campo confirmar password.";
+}
+if (in_array("18", $query)){
+    $campo_atual_password = "Para alterar a password, o campo atual password não pode estar vazio. Por favor, preenche-o.";
+}
+// CAMPO NIF
+if (in_array("17", $query)) {
+    $campo_nif = "O NIF deve ter entre 9 algarismos.";
+}
 
 ?>
 
@@ -182,13 +157,6 @@ if (isset($url['query'])) {
                 // Ligação à BD 
                 require_once('../connections/connection.php');
 
-                $campo_nome = "";
-                $campo_apelido = "";
-                $campo_email = "";
-                $campo_new_password = "";
-                $campo_c_password = "";
-                $campo_nif = "";
-
                 // Definir a query
                 $query = "SELECT nome, apelido, genero, email, data_nascimento, rua, numero_porta, andar, codigo_postal, cidade, contribuinte FROM users WHERE email=?";
                 $result = mysqli_prepare($link, $query);
@@ -219,39 +187,40 @@ if (isset($url['query'])) {
             <div class=\"input-field col s6\">
                 <input id=\"first_name\" type=\"text\" class=\"validate\" name=\"nome\" value=\"$nome_BD\">
                 <label for=\"first_name\">Nome</label>
-                <span class=\"green-text\"><?= $campo_nome ?></span>
+                <span class=\"green-text\"> $campo_nome </span>
             </div>
             <div class=\"input-field col s6\">
                 <input id=\"last_name\" type=\"text\" class=\"validate\" name=\"apelido\" value=\"$apelido_BD\">
                 <label for=\"last_name\">Apelido</label>
-                <span class=\"green-text\"><?= $campo_apelido ?></span>
+                <span class=\"green-text\"> $campo_apelido </span>
             </div>
         </div>
         <div class=\"row\">
             <div class=\"input-field col s12\">
                 <input id=\"email\" type=\"email\" class=\"validate\" name=\"email\" value=\"$email_BD\">
                 <label for=\"email\">Email</label>
-                <span class=\"green-text\"><?= $campo_email ?></span>
+                <span class=\"green-text\"> $campo_email</span>
             </div>
         </div>
         <div class=\"row\">
             <div class=\"input-field col s12\">
                 <input id=\"password\" type=\"password\" class=\"validate\" name=\"atual_password\">
                 <label for=\"password\">Atual Password</label>
+                <span class=\"green-text\">$campo_atual_password</span>
             </div>
         </div>
         <div class=\"row\">
             <div class=\"input-field col s12\">
                 <input id=\"new_password\" type=\"password\" class=\"validate\" name=\"new_password\">
                 <label for=\"new_password\">Nova Password</label>
-                <span class=\"green - text\"><?= $campo_new_password ?></span>
+                <span class=\"green-text\"> $campo_new_password</span>
             </div>
         </div>
         <div class=\"row\">
             <div class=\"input-field col s12\">
                 <input id=\"password_confirmation\" type=\"password\" class=\"validate\" name=\"c_password\">
                 <label for=\"password_confirmation\">Confirmação da Password</label>
-                <span class=\"green - text\"><?= $campo_c_password ?></span>
+                <span class=\"green-text\"> $campo_c_password</span>
             </div>
         </div>
     </div>
@@ -277,7 +246,7 @@ if (isset($url['query'])) {
             <div class=\"input-field col s12\">
                 <input id=\"nif\" type=\"text\" class=\"validate\" name=\"nif\" value=\"$nif_BD\">
                 <label for=\"nif\">NIF</label>
-                <span class=\"green - text\"><?= $campo_nif ?></span>
+                <span class=\"green-text\">$campo_nif</span>
             </div>
     </div>
 

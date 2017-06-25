@@ -4,7 +4,7 @@ $emModoCriacao = true;
 
 //verificar se estamos em modo de criação
 if( strpos( $_SERVER['REQUEST_URI'], "profile_data_control" ) !== false ) {
-    echo "Estamos na edicao";
+//    echo "Estamos na edicao";
     $emModoCriacao = false;
 }
 
@@ -72,7 +72,7 @@ function validar_apelido()
 
 function validar_genero()
 {
-    //Verifica se o campo gene está preenchido.
+    //Verifica se o campo genero está preenchido.
     if (empty($_POST['genero'])) {
         $GLOBALS['erro'][] = 5;
     }
@@ -113,43 +113,70 @@ function validar_password($emModoCriacao)
     $pass = "";
     $confPass = "";
 
-    //Verifica se o campo passwords está preenchido.
-    if (($emModoCriacao && !empty($_POST['password'])) || (!$emModoCriacao && !empty($_POST['new_password']))) {
-        if($emModoCriacao){
-            $pass = $_POST['password'];
-//        $confPass = $_POST['password'];
-        } else {
-            $pass = $_POST['new_password'];
-        }
-        //Se estiver preenchido, verifica o número de caracteres.
-        if ((strlen($pass)) < 8 || (strlen($pass)) > 12) {
-            //Erro de falta ou excesso de caracteres.
-            $GLOBALS['erro'][] = 10;
-        }
+    if ($emModoCriacao) {
+        //em modo criação
 
-        if (!preg_match("#[0-9]+#", $pass)) {
-            $GLOBALS['erro'][] = 11;
+        //Verifica se o campo passwords está preenchido.
+        if (!empty($_POST['password'])) {
+            validar_req_min_password(($_POST['password']));
+            if (!empty($_POST['cpassword'])) {
+                validar_password_iguais($_POST['password'], $_POST['cpassword']);
+            }
+            else {
+            //Erro de campo vazio.
+            $GLOBALS['erro'][] = 14;
+            }
         }
-        if (!preg_match("#[A-Z]+#", $pass)) {
-            $GLOBALS['erro'][] = 12;
-        }
-        if (!preg_match("#[a-z]+#", $pass)) {
-            $GLOBALS['erro'][] = 13;
-        }
-    }else {
-        //Erro de campo vazio.
-        $GLOBALS['erro'][] = 9;
-    }
-
-
-    //Verifica se o campo confirmar password está preenchido.
-    if (!empty($_POST['cpassword'])) {
-        //se estiver preenchido, verifica se é igual ao campo password
-        if ($_POST["password"] != $_POST["cpassword"]) {
-            $GLOBALS['erro'][] = 15; // erro = 3 -> password e confirmação da password não são iguais
+        else {
+            //Erro de campo vazio.
+            $GLOBALS['erro'][] = 9;
         }
     } else {
-        // Erro de campo vazio.
-        $GLOBALS['erro'][] = 14;
+        //em modo de edição
+
+        //Verifica se o campo passwords está preenchido.
+        if (!empty($_POST['new_password'])) {
+            validar_req_min_password(($_POST['new_password']));
+            if (!empty($_POST['c_password'])) {
+                validar_password_iguais($_POST['new_password'], $_POST['c_password']);
+            }
+            else {
+                //nunca entra aqui porque se estiver vazio, não bate com a password, logo dá esse erro
+                //Erro de campo vazio.
+                $GLOBALS['erro'][] = 14;
+            }
+
+            if (!empty($_POST['atual_password'])) {
+                //validar se a atual password é igual à que consta na BD
+            }
+            else {
+                //Erro de campo vazio.
+                $GLOBALS['erro'][] = 18;
+            }
+        }
+    }
+}
+
+function validar_req_min_password($pass) {
+    //Se estiver preenchido, verifica o número de caracteres.
+    if ((strlen($pass)) < 8 || (strlen($pass)) > 12) {
+        //Erro de falta ou excesso de caracteres.
+        $GLOBALS['erro'][] = 10;
+    }
+
+    if (!preg_match("#[0-9]+#", $pass)) {
+        $GLOBALS['erro'][] = 11;
+    }
+    if (!preg_match("#[A-Z]+#", $pass)) {
+        $GLOBALS['erro'][] = 12;
+    }
+    if (!preg_match("#[a-z]+#", $pass)) {
+        $GLOBALS['erro'][] = 13;
+    }
+}
+
+function validar_password_iguais($pass, $cpass) {
+    if ($pass != $cpass) {
+        $GLOBALS['erro'][] = 15; // erro = 3 -> password e confirmação da password não são iguais
     }
 }

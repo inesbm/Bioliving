@@ -13,14 +13,10 @@ require_once '../components/form_validate.php';
 //Verifica se existem erros. Se não existirem, é feito registo.
 if(count($GLOBALS['erro'])==0) {
 
-////VALIDAÇÃO DO FORMULÁRIO
-//require_once '../components/form_validate.php';
-//var_dump($erro);
-
-    $user_id = $_SESSION['user_id'];
+$user_id = $_SESSION['user_id'];
 //$user = $_SESSION['user'];
 
-
+    //Alteração dos dados do utilizador na BD
     $query = "UPDATE users SET nome=?,apelido=?,email=?,data_nascimento=?,rua=?,numero_porta=?,andar=?,
     codigo_postal=?,cidade=? WHERE id_user=$user_id";
 
@@ -88,6 +84,17 @@ if(count($GLOBALS['erro'])==0) {
 
         header('Location: ../pages/profile.php?atualizacao=invalida');
     }
+}
+else{
+    $_SESSION['nome'] = $_POST['nome'];
+    $_SESSION['apelido'] = $_POST['apelido'];
+    $_SESSION['email'] = $_POST['email'];
+//    $_SESSION['genero'] = $_POST['genero'];
+    $_SESSION['registo']='invalido';
+
+    $erro_query_string = http_build_query($GLOBALS['erro']);
+
+    header('Location: ../pages/profile.php?'.$erro_query_string);
 }
 
 //printf("Error #%d: %s.\n", mysqli_stmt_errno($stmt), mysqli_stmt_error($stmt));
